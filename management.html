@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ব্যবস্থাপনা পর্ষদ - কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ">
+    <title data-i18n="page_title">ব্যবস্থাপনা | টিটিসি পীরগঞ্জ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+ <link rel="stylesheet" href="./assets/css/pages/management.css">
+</head>
+
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only text-purple-600 p-2 fixed z-50 bg-white">মূল কন্টেন্টে যান</a>
+
+    <div id="header-placeholder" class="sticky top-0 z-50 w-full bg-white shadow-sm"></div>
+
+    <main id="main-content" class="flex-grow">
+        <section class="bg-purple-700 text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+            
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight" data-i18n="mgmt_hero_title">আমাদের ব্যবস্থাপনা পর্ষদ</h1>
+                
+                <nav class="flex justify-center items-center gap-2 text-purple-200 text-sm font-medium">
+                    <a href="index.html" class="hover:text-white transition-colors" data-i18n="nav_home">হোম</a>
+                    <i class="fas fa-chevron-right text-xs opacity-50"></i>
+                    <span class="text-white" data-i18n="nav_management">ব্যবস্থাপনা</span>
+                </nav>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24 relative">
+            <div class="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+            
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-12">
+                    <span class="inline-block py-1.5 px-4 rounded-full bg-purple-100 text-purple-700 text-sm font-bold uppercase tracking-wider shadow-sm">
+                        Head of Institute
+                    </span>
+                </div>
+
+                <div id="principal-container" class="max-w-5xl mx-auto">
+                    </div>
+            </div>
+        </section>
+<section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="team_title">
+                শিক্ষক ও কর্মচারী বৃন্দ
+            </h2>
+
+            <p class="text-gray-600 text-lg" data-i18n="team_desc">
+                আমাদের অভিজ্ঞ এবং নিবেদিতপ্রাণ প্রশিক্ষক ও কর্মী দল, যারা দক্ষ জনশক্তি তৈরিতে নিরলস কাজ করে যাচ্ছেন।
+            </p>
+
+            <div class="w-24 h-1.5 bg-purple-600 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <div id="team-container" class="flex flex-wrap justify-center gap-8">
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <div id="employee-modal" class="fixed inset-0 z-50 hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-900 bg-opacity-50 transition-opacity" aria-hidden="true" id="modal-overlay"></div>
+
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <div id="modal-content" class="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full scale-95 opacity-0">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 relative">
+                    <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                    <div class="sm:flex sm:items-start">
+                        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-24 w-24 sm:mx-0 sm:h-32 sm:w-32 bg-purple-100 rounded-full overflow-hidden border-4 border-white shadow-md">
+                            <img id="modal-img" class="h-full w-full object-cover" src="" alt="">
+                        </div>
+                        <div class="mt-3 text-center sm:mt-0 sm:ml-6 sm:text-left">
+                            <h3 class="text-2xl leading-6 font-bold text-gray-900" id="modal-name"></h3>
+                            <p class="text-purple-600 font-medium mt-1" id="modal-role"></p>
+                            <div class="mt-4">
+                                <p class="text-sm text-gray-600 leading-relaxed" id="modal-desc"></p>
+                            </div>
+                            <div class="mt-6 space-y-3">
+                                <p class="flex items-center justify-center sm:justify-start text-gray-700">
+                                    <i class="fas fa-phone-alt text-purple-500 mr-3 w-5"></i>
+                                    <span id="modal-phone" class="font-medium"></span>
+                                </p>
+                                <p class="flex items-center justify-center sm:justify-start text-gray-700">
+                                    <i class="fas fa-envelope text-purple-500 mr-3 w-5"></i>
+                                    <span id="modal-email"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <a href="#" id="call-btn" class="w-full inline-flex justify-center rounded-xl border border-transparent shadow-sm px-6 py-3 bg-purple-600 text-base font-medium text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:ml-3 sm:w-auto sm:text-sm transition-colors">
+                        <i class="fas fa-phone mr-2 mt-1"></i> কল করুন
+                    </a>
+                    <button type="button" id="close-modal-btn" class="mt-3 w-full inline-flex justify-center rounded-xl border border-gray-300 shadow-sm px-6 py-3 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm transition-colors">
+                        বন্ধ করুন
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="./assets/js/pages/management.js"></script>
+    <script src="./assets/js/loader.js"></script>
+</body>
+</html>

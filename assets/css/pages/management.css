@@ -1,0 +1,39 @@
+/* Google Fonts: Noto Serif Bengali for Bangla */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@300;400;500;600;700&display=swap");
+
+body {
+  transition: font-family 0.3s ease;
+}
+
+/* --------- When User Select Bangla --------- */
+html[lang="bn"] body {
+  font-family: "Noto Serif Bengali", serif;
+}
+
+/* --------- When User Select English --------- */
+
+html[lang="en"] body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Ensure images cover their container properly */
+.object-cover-top {
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Smooth Modal Transition */
+#employee-modal {
+  transition: opacity 0.3s ease-in-out;
+}
+#modal-content {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Line Clamp for descriptions */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

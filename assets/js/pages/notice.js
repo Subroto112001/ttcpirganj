@@ -103,20 +103,30 @@ const translations = {
 };
 
 // --- GLOBAL STATE ---
-let currentLang = "bn"; // Remove localStorage for now
+let currentLang = localStorage.getItem("lang") || "bn";
 let allNotices = [];
 let categoriesData = {};
 
-// --- GLOBAL LANGUAGE TOGGLE ---
+// --- TOGGLE LANGUAGE (RESTORED) ---
+// This function is required because loader.js calls window.toggleLanguage()
 window.toggleLanguage = function () {
-  currentLang = currentLang === "bn" ? "en" : "bn";
-  updateContent();
-  renderNotices(filterNotices());
+  const currentLang = localStorage.getItem("lang") || "bn";
+  const newLang = currentLang === "bn" ? "en" : "bn";
+
+  localStorage.setItem("lang", newLang);
+
+  // Update content immediately
+  if (typeof window.updateContent === "function") {
+    window.updateContent();
+  }
 };
 
-// --- UPDATE STATIC CONTENT ---
-function updateContent() {
-  // Update text elements
+// --- UPDATE CONTENT (Overwrites loader.js version for this page) ---
+window.updateContent = function () {
+  // 1. Get the latest language from storage
+  currentLang = localStorage.getItem("lang") || "bn";
+
+  // 2. Update all standard text elements (header/footer/static)
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
     if (translations[currentLang][key]) {
@@ -124,7 +134,7 @@ function updateContent() {
     }
   });
 
-  // Update placeholders
+  // 3. Update placeholders
   document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
     const key = element.getAttribute("data-i18n-placeholder");
     if (translations[currentLang][key]) {
@@ -132,17 +142,23 @@ function updateContent() {
     }
   });
 
-  // Update HTML lang attribute
+  // 4. Update Filter Dropdown Options
+  populateFilters();
+
+  // 5. Re-render the Dynamic Notice List
+  renderNotices(filterNotices());
+
+  // 6. Update HTML lang attribute
   document.documentElement.lang = currentLang;
 
-  // Update language toggle button text
+  // 7. Update language toggle button text
   const btnText = currentLang === "bn" ? "ENGLISH" : "বাংলা";
   const btnTextMobile = currentLang === "bn" ? "EN" : "BN";
   const desktopBtn = document.getElementById("lang-btn-text-desktop");
   const mobileBtn = document.getElementById("lang-btn-text-mobile");
   if (desktopBtn) desktopBtn.innerText = btnText;
   if (mobileBtn) mobileBtn.innerText = btnTextMobile;
-}
+};
 
 // --- LOAD NOTICES FROM JSON ---
 async function loadNotices() {
@@ -151,8 +167,11 @@ async function loadNotices() {
     const data = await response.json();
     allNotices = data.notices;
     categoriesData = data.categories;
+    // Initial Render
     renderNotices(allNotices);
     populateFilters();
+    // Update content to ensure static text matches loaded lang
+    window.updateContent();
   } catch (error) {
     console.error("Error loading notices:", error);
     showNoResults();
@@ -164,17 +183,24 @@ function populateFilters() {
   const categoryFilter = document.getElementById("category-filter");
   if (!categoryFilter) return;
 
+  const currentSelection = categoryFilter.value; // Save selection
+
   // Clear existing options except "All"
   categoryFilter.innerHTML = `<option value="all" data-i18n="filter_all">${translations[currentLang].filter_all}</option>`;
 
   // Add category options
-  Object.keys(categoriesData).forEach((catKey) => {
-    const option = document.createElement("option");
-    option.value = catKey;
-    option.textContent = categoriesData[catKey][currentLang];
-    option.setAttribute("data-cat", catKey);
-    categoryFilter.appendChild(option);
-  });
+  if (categoriesData) {
+    Object.keys(categoriesData).forEach((catKey) => {
+      const option = document.createElement("option");
+      option.value = catKey;
+      option.textContent = categoriesData[catKey][currentLang];
+      option.setAttribute("data-cat", catKey);
+      categoryFilter.appendChild(option);
+    });
+  }
+
+  // Restore selection if valid, otherwise default to all
+  categoryFilter.value = currentSelection;
 }
 
 // --- FORMAT DATE ---
@@ -393,27 +419,10 @@ function filterNotices() {
 // --- DOM CONTENT LOADED ---
 document.addEventListener("DOMContentLoaded", () => {
   // Load initial content
-  updateContent();
   loadNotices();
+  // We call loadNotices first, which fetches data and then calls updateContent.
 
-  // Mobile menu toggle
-  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", function () {
-      mobileMenu.classList.toggle("active");
-      const icon = mobileMenuBtn.querySelector("i");
-      if (mobileMenu.classList.contains("active")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
-      } else {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-      }
-    });
-  }
-
-  // Search input event
+  // Event Listeners for filters
   const searchInput = document.getElementById("search-input");
   if (searchInput) {
     searchInput.addEventListener("input", () => {
@@ -421,7 +430,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Category filter event
   const categoryFilter = document.getElementById("category-filter");
   if (categoryFilter) {
     categoryFilter.addEventListener("change", () => {
@@ -429,7 +437,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Date filter event
   const dateFilter = document.getElementById("date-filter");
   if (dateFilter) {
     dateFilter.addEventListener("change", () => {
@@ -437,7 +444,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Pagination (visual only)
+  // Visual Pagination
   const paginationLinks = document.querySelectorAll(".pagination-nav a");
   paginationLinks.forEach((link) => {
     link.addEventListener("click", (e) => {

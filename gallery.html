@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="গ্যালারি - কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ">
+    <title data-i18n="page_title">গ্যালারি | টিটিসি পীরগঞ্জ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/pages/gallery.css">
+</head>
+
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only text-purple-600 p-2 fixed z-50 bg-white">মূল কন্টেন্টে
+        যান</a>
+
+    <div id="header-placeholder" class="sticky top-0 z-50 w-full bg-white shadow-sm"></div>
+
+    <main id="main-content" class="flex-grow">
+        <section class="bg-purple-700 text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight" data-i18n="gallery_hero_title">ফটো
+                    গ্যালারি</h1>
+
+                <nav class="flex justify-center items-center gap-2 text-purple-200 text-sm font-medium">
+                    <a href="index.html" class="hover:text-white transition-colors" data-i18n="nav_home">হোম</a>
+                    <i class="fas fa-chevron-right text-xs opacity-50"></i>
+                    <span class="text-white" data-i18n="nav_gallery">গ্যালারি</span>
+                </nav>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button
+                        class="filter-btn active border-2 border-purple-600 text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition"
+                        data-filter="all" data-i18n="filter_all">সকল ছবি</button>
+                    <button
+                        class="filter-btn border-2 border-gray-300 text-gray-600 px-6 py-2 rounded-full font-semibold hover:border-purple-600 hover:text-purple-600 transition"
+                        data-filter="campus" data-i18n="filter_campus">ক্যাম্পাস</button>
+                    <button
+                        class="filter-btn border-2 border-gray-300 text-gray-600 px-6 py-2 rounded-full font-semibold hover:border-purple-600 hover:text-purple-600 transition"
+                        data-filter="events" data-i18n="filter_events">ইভেন্ট ও কার্যক্রম</button>
+                    <button
+                        class="filter-btn border-2 border-gray-300 text-gray-600 px-6 py-2 rounded-full font-semibold hover:border-purple-600 hover:text-purple-600 transition"
+                        data-filter="team" data-i18n="filter_team">শিক্ষক ও স্টাফ</button>
+                </div>
+
+                <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                </div>
+
+                <div id="no-results" class="hidden text-center py-12">
+                    <i class="fas fa-images text-gray-300 text-6xl mb-4"></i>
+                    <p class="text-gray-500 text-xl" data-i18n="no_images">কোনো ছবি পাওয়া যায়নি।</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="imageModal"
+        class="fixed inset-0 z-[100] bg-black/95 hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <button id="closeModal"
+            class="absolute top-5 right-5 text-white hover:text-purple-400 transition transform hover:scale-110 z-50 bg-black/50 w-10 h-10 rounded-full">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+
+        <div class="relative w-full max-w-5xl">
+            <img id="modalImage" src="" alt="Full view"
+                class="w-full max-h-[85vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+            <p id="modalCaption" class="text-center text-white mt-4 text-lg font-medium"></p>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="./assets/js/pages/gallery.js"></script>
+    <script src="./assets/js/loader.js"></script>
+</body>
+
+</html>

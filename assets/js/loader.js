@@ -21,19 +21,32 @@ function initializeMobileMenu() {
   const mobileMenu = document.getElementById("mobile-menu");
 
   if (mobileMenuBtn && mobileMenu) {
+    // --- FIX: Force Menu Closed on Load ---
+    // This ensures the menu starts hidden, solving the "always open" bug.
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("active");
+    // --------------------------------------
+
     mobileMenuBtn.addEventListener("click", function () {
+      // Toggle Tailwind's 'hidden' class to Show/Hide
+      mobileMenu.classList.toggle("hidden");
+
+      // Optional: Toggle 'active' if you use it for custom animations
       mobileMenu.classList.toggle("active");
-      const isExpanded = mobileMenu.classList.contains("active");
+
+      const isExpanded = !mobileMenu.classList.contains("hidden");
       mobileMenuBtn.setAttribute("aria-expanded", isExpanded);
 
       // Change icon
       const icon = mobileMenuBtn.querySelector("i");
-      if (isExpanded) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
-      } else {
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
+      if (icon) {
+        if (isExpanded) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
       }
     });
 
@@ -41,11 +54,15 @@ function initializeMobileMenu() {
     const mobileLinks = mobileMenu.querySelectorAll("a");
     mobileLinks.forEach((link) => {
       link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden"); // Force hide
         mobileMenu.classList.remove("active");
         mobileMenuBtn.setAttribute("aria-expanded", "false");
+
         const icon = mobileMenuBtn.querySelector("i");
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
+        if (icon) {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
       });
     });
   }
@@ -76,9 +93,8 @@ function initializeLanguageButtons() {
   }
 }
 
-// Active nav item 
+// Active nav item
 function setActiveNavItem() {
-  
   const currentPage =
     window.location.pathname.split("/").pop().replace(".html", "") || "index";
 
@@ -86,11 +102,8 @@ function setActiveNavItem() {
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
     const pageName = link.getAttribute("data-page");
-
-    // Active class remove 
     link.classList.remove("text-purple-600", "font-bold");
 
-    
     if (
       pageName === currentPage ||
       (currentPage === "" && pageName === "index") ||
@@ -104,11 +117,8 @@ function setActiveNavItem() {
   const mobileNavLinks = document.querySelectorAll(".nav-link-mobile");
   mobileNavLinks.forEach((link) => {
     const pageName = link.getAttribute("data-page");
-
-    // Active class remove 
     link.classList.remove("text-purple-600", "font-bold", "bg-purple-50");
 
-    // Add active class if it matches the current page
     if (
       pageName === currentPage ||
       (currentPage === "" && pageName === "index") ||
@@ -145,13 +155,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // Wait a bit to ensure DOM updates
   setTimeout(() => {
-    // Initialize everything after components are loaded
     initializeMobileMenu();
     initializeLanguageButtons();
     initializeSmoothScroll();
-    setActiveNavItem(); // Active nav item 
+    setActiveNavItem();
 
-    // Update language
+    // Update language content (runs the function from contact.js)
     if (typeof window.updateContent === "function") {
       window.updateContent();
     }

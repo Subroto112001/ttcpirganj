@@ -1,0 +1,46 @@
+/* Google Fonts: Noto Serif Bengali for Bangla */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@300;400;500;600;700&display=swap");
+
+body {
+  transition: font-family 0.3s ease;
+}
+
+/* --------- When User Select Bangla --------- */
+html[lang="bn"] body {
+  font-family: "Noto Serif Bengali", serif;
+}
+
+/* --------- When User Select English --------- */
+
+html[lang="en"] body {
+  font-family: "Times New Roman", Times, serif;
+}
+ /* Custom Animations matching your site */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.6s ease-out forwards;
+        }
+
+        /* Map Container */
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            filter: grayscale(20%);
+            transition: filter 0.3s;
+        }
+
+        .map-container iframe:hover {
+            filter: grayscale(0%);
+        }
