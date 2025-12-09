@@ -1,4 +1,4 @@
-// ডায়নামিকভাবে হেডার এবং ফুটার লোড করার ফাংশন
+// Dynamic function to load header and footer
 async function loadComponent(elementId, filePath) {
   try {
     const response = await fetch(filePath);
@@ -15,7 +15,7 @@ async function loadComponent(elementId, filePath) {
   }
 }
 
-// মোবাইল মেনু ফাংশনালিটি
+// Mobile Menu Functionality
 function initializeMobileMenu() {
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
@@ -26,7 +26,7 @@ function initializeMobileMenu() {
       const isExpanded = mobileMenu.classList.contains("active");
       mobileMenuBtn.setAttribute("aria-expanded", isExpanded);
 
-      // আইকন পরিবর্তন করুন
+      // Change icon
       const icon = mobileMenuBtn.querySelector("i");
       if (isExpanded) {
         icon.classList.remove("fa-bars");
@@ -37,7 +37,7 @@ function initializeMobileMenu() {
       }
     });
 
-    // মোবাইল মেনুর লিংকে ক্লিক করলে মেনু বন্ধ করুন
+    // Close mobile menu when clicking on a link
     const mobileLinks = mobileMenu.querySelectorAll("a");
     mobileLinks.forEach((link) => {
       link.addEventListener("click", () => {
@@ -51,9 +51,9 @@ function initializeMobileMenu() {
   }
 }
 
-// ভাষা বাটন ইনিশিয়ালাইজ করুন
+// Language buttons initialization
 function initializeLanguageButtons() {
-  // ডেস্কটপ বাটন
+  // desktop button
   const desktopBtn = document.getElementById("lang-btn-desktop");
   if (desktopBtn) {
     desktopBtn.addEventListener("click", function (e) {
@@ -64,7 +64,7 @@ function initializeLanguageButtons() {
     });
   }
 
-  // মোবাইল বাটন
+  // mobile button
   const mobileBtn = document.getElementById("lang-btn-mobile");
   if (mobileBtn) {
     mobileBtn.addEventListener("click", function (e) {
@@ -76,7 +76,50 @@ function initializeLanguageButtons() {
   }
 }
 
-// স্মুথ স্ক্রল ইনিশিয়ালাইজ করুন
+// Active nav item 
+function setActiveNavItem() {
+  
+  const currentPage =
+    window.location.pathname.split("/").pop().replace(".html", "") || "index";
+
+  // desktop nav links
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    const pageName = link.getAttribute("data-page");
+
+    // Active class remove 
+    link.classList.remove("text-purple-600", "font-bold");
+
+    
+    if (
+      pageName === currentPage ||
+      (currentPage === "" && pageName === "index") ||
+      (currentPage === "index" && pageName === "index")
+    ) {
+      link.classList.add("text-purple-600", "font-bold");
+    }
+  });
+
+  // mobile nav links
+  const mobileNavLinks = document.querySelectorAll(".nav-link-mobile");
+  mobileNavLinks.forEach((link) => {
+    const pageName = link.getAttribute("data-page");
+
+    // Active class remove 
+    link.classList.remove("text-purple-600", "font-bold", "bg-purple-50");
+
+    // Add active class if it matches the current page
+    if (
+      pageName === currentPage ||
+      (currentPage === "" && pageName === "index") ||
+      (currentPage === "index" && pageName === "index")
+    ) {
+      link.classList.add("text-purple-600", "font-bold", "bg-purple-50");
+    }
+  });
+}
+
+// Smooth Scroll Initialization
 function initializeSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -92,22 +135,23 @@ function initializeSmoothScroll() {
   });
 }
 
-// পেজ লোড হওয়ার পর হেডার এবং ফুটার লোড করুন
+// Load header and footer after page load
 document.addEventListener("DOMContentLoaded", async function () {
-  // হেডার লোড করুন
+  // Load header
   await loadComponent("header-placeholder", "./component/header.html");
 
-  // ফুটার লোড করুন
+  // Load footer
   await loadComponent("footer-placeholder", "./component/footer.html");
 
-  // একটু অপেক্ষা করুন যাতে DOM আপডেট হয়
+  // Wait a bit to ensure DOM updates
   setTimeout(() => {
-    // কম্পোনেন্ট লোড হওয়ার পর সব ইনিশিয়ালাইজ করুন
+    // Initialize everything after components are loaded
     initializeMobileMenu();
     initializeLanguageButtons();
     initializeSmoothScroll();
+    setActiveNavItem(); // Active nav item 
 
-    // ভাষা আপডেট করুন
+    // Update language
     if (typeof window.updateContent === "function") {
       window.updateContent();
     }

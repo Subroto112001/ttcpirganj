@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700&display=swap");
+
+/* Language-specific fonts */
+html[lang="bn"] body {
+    font-family: "Noto Serif Bengali", serif;
+}
+
+html[lang="en"] body {
+    font-family: "Times New Roman", serif;
+}
+
+body {
+    overflow-x: hidden;
+    transition: font-family 0.3s ease;
+}
+
+/* Hero gradient background */
+.hero-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Fade-in animation for hero section */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Minimal card hover - shadow এবং subtle scale */
+.card-hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-hover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Course cards - minimal animation with scale */
+.course-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Subtle shine effect on hover */
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.course-card:hover::before {
+    left: 100%;
+}
+
+/* Icon subtle scale on hover */
+.course-card .bg-green-500,
+.course-card .bg-pink-500,
+.course-card .bg-yellow-500,
+.course-card .bg-red-500 {
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover .bg-green-500,
+.course-card:hover .bg-pink-500,
+.course-card:hover .bg-yellow-500,
+.course-card:hover .bg-red-500 {
+    transform: scale(1.1);
+}
+
+/* Mobile menu transition */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-menu.active {
+    max-height: 500px;
+}
+
+/* Table styles */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+.custom-table th {
+    background: #7528BB;
+    color: white;
+    font-weight: 600;
+}
+
+.custom-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.custom-table tbody tr:nth-child(even):hover {
+    background-color: #f3f4f6;
+}
+
+/* Requirements & Facilities cards - hover with scale */
+section .bg-gradient-to-br {
+    transition: all 0.3s ease;
+}
+
+section .bg-gradient-to-br:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* CTA button hover with scale */
+.hero-gradient a {
+    transition: all 0.3s ease;
+}
+
+.hero-gradient a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .custom-table {
+        font-size: 0.875rem;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .custom-table th,
+    .custom-table td {
+        padding: 0.5rem;
+    }
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}

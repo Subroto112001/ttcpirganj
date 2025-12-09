@@ -1,7 +1,3 @@
-/**
- * JavaScript for About Us Page
- * Includes: Mobile Menu, Language Switcher (About Us specific)
- */
 
 // --- Mobile Menu Logic ---
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
@@ -52,7 +48,7 @@ const translations = {
     nav_management: "ব্যবস্থাপনা",
     nav_gallery: "গ্যালারি",
     nav_contact: "যোগাযোগ",
-
+    nav_notice: "নোটিশ",
     // About Us Page Content
     about_hero_title: "আমাদের সম্পর্কে",
     inst_intro_title: "প্রতিষ্ঠান পরিচিতি",
@@ -99,8 +95,7 @@ const translations = {
 
     // Footer
     footer_logo_text: "টিটিসি পীরগঞ্জ",
-    footer_desc:
-      "কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ, রংপুর",
+    footer_desc: "কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ, রংপুর",
     footer_ql_title: "দ্রুত লিংক",
     footer_contact_title: "যোগাযোগের তথ্য",
     footer_address: "মকিমপুর, পীরগঞ্জ, রংপুর",
@@ -122,7 +117,7 @@ const translations = {
     nav_management: "Management",
     nav_gallery: "Gallery",
     nav_contact: "Contact",
-
+    nav_notice: "Notice",
     // About Us Page Content
     about_hero_title: "About Us",
     inst_intro_title: "Institute Introduction",
@@ -171,8 +166,7 @@ const translations = {
 
     // Footer
     footer_logo_text: "TTC Pirganj",
-    footer_desc:
-      "Technical Training Center, Pirganj, Rangpur",
+    footer_desc: "Technical Training Center, Pirganj, Rangpur",
     footer_ql_title: "Quick Links",
     footer_contact_title: "Contact Info",
     footer_address: "Mokimpur, Pirganj, Rangpur",
