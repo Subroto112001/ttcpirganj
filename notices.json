@@ -1,0 +1,107 @@
+{
+  "notices": [
+    {
+      "id": 1,
+      "date": "2025-12-08",
+      "category": "admission",
+      "isNew": true,
+      "title": {
+        "bn": "আগস্ট-নভেম্বর/২০২৫ সেশনে ভর্তি",
+        "en": "Admission for Aug-Nov 2025 Session"
+      },
+      "description": {
+        "bn": "ASSET প্রকল্পের আওতায় ০৩ মাস/৩৬০ ঘন্টা মেয়াদী প্রশিক্ষণ কোর্সে ভর্তির জন্য আবেদন আহ্বান করা হচ্ছে।",
+        "en": "Applications invited for 03 months/360 hours training course under ASSET project."
+      },
+      "pdfLink": "#",
+      "detailsLink": "#"
+    },
+    {
+      "id": 2,
+      "date": "2025-11-25",
+      "category": "result",
+      "isNew": false,
+      "title": {
+        "bn": "৭ম সাইকেল চূড়ান্ত ফলাফল",
+        "en": "7th Cycle Final Result"
+      },
+      "description": {
+        "bn": "৭ম সাইকেল প্রশিক্ষণের চূড়ান্ত ফলাফল প্রকাশ করা হয়েছে।",
+        "en": "Final result of 7th cycle training has been published."
+      },
+      "pdfLink": "#"
+    },
+    {
+      "id": 3,
+      "date": "2025-11-20",
+      "category": "exam",
+      "isNew": false,
+      "title": {
+        "bn": "লিখিত পরীক্ষার ফলাফল",
+        "en": "Written Exam Result"
+      },
+      "description": {
+        "bn": "আগামী সেশনের লিখিত পরীক্ষার ফলাফল প্রকাশ করা হয়েছে।",
+        "en": "Written exam result for next session has been published."
+      },
+      "pdfLink": "#"
+    },
+    {
+      "id": 4,
+      "date": "2025-11-15",
+      "category": "rpl",
+      "isNew": false,
+      "title": {
+        "bn": "RPL প্রোগ্রাম চালু",
+        "en": "RPL Program Launched"
+      },
+      "description": {
+        "bn": "অভিজ্ঞ কর্মীদের জন্য Recognition of Prior Learning প্রোগ্রাম।",
+        "en": "Recognition of Prior Learning program for experienced workers."
+      },
+      "applyLink": "#"
+    },
+    {
+      "id": 5,
+      "date": "2025-11-10",
+      "category": "job",
+      "isNew": false,
+      "title": {
+        "bn": "দেশ-বিদেশ চাকরির সুযোগ",
+        "en": "Job Opportunities"
+      },
+      "description": {
+        "bn": "প্রশিক্ষণপ্রাপ্ত প্রশিক্ষণার্থীদের জন্য চাকরির সুযোগ।",
+        "en": "Job opportunities for trained trainees in home and abroad."
+      },
+      "pdfLink": "#"
+    }
+  ],
+  "categories": {
+    "admission": {
+      "bn": "ভর্তি",
+      "en": "Admission",
+      "color": "red"
+    },
+    "result": {
+      "bn": "ফলাফল",
+      "en": "Result",
+      "color": "blue"
+    },
+    "exam": {
+      "bn": "পরীক্ষা",
+      "en": "Exam",
+      "color": "green"
+    },
+    "rpl": {
+      "bn": "RPL",
+      "en": "RPL",
+      "color": "purple"
+    },
+    "job": {
+      "bn": "চাকরি",
+      "en": "Job",
+      "color": "orange"
+    }
+  }
+}
