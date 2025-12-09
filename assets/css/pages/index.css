@@ -1,0 +1,71 @@
+/* Google Fonts: Noto Serif Bengali for Bangla */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@300;400;500;600;700&display=swap");
+
+body {
+  transition: font-family 0.3s ease; 
+}
+
+/* --------- When User Select Bangla --------- */
+html[lang="bn"] body {
+    font-family: "Noto Serif Bengali", serif;
+}
+
+/* --------- When User Select English --------- */
+
+html[lang="en"] body {
+  font-family: "Times New Roman", Times, serif;
+}
+/* --------------End the Language Section------------------ */
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu.active {
+  max-height: 500px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}

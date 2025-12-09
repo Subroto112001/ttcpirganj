@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ - বৈদেশিক কর্মসংস্থানের জন্য প্রশিক্ষণ কেন্দ্র">
+    <title data-i18n="page_title">কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/pages/index.css">
+</head>
+
+<body class="bg-gray-50">
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">মূল কন্টেন্টে যান</a>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4" role="navigation" aria-label="প্রধান নেভিগেশন">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="https://ttcpirganj.com/wp-content/uploads/2024/08/TTC-Pirganj-Logo-768x768.png" alt=""
+                        class=" w-16">
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-gray-800" data-i18n="header_title">কারিগরি
+                            প্রশিক্ষণ কেন্দ্র</h1>
+                        <p class="text-sm text-gray-600" data-i18n="header_subtitle">পীরগঞ্জ, রংপুর</p>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <ul class="flex space-x-6 items-center">
+                        <li><a href="#home" class="text-purple-600 font-bold" aria-label="হোম পেজ"
+                                data-i18n="nav_home">হোম</a></li>
+                        <li><a href="./about.html" class="hover:text-purple-600 transition" aria-label="আমাদের সম্পর্কে"
+                                data-i18n="nav_about">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#courses" class="hover:text-purple-600 transition" aria-label="কোর্স সমূহ"
+                                data-i18n="nav_courses">কোর্স</a></li>
+                        <li><a href="#management" class="hover:text-purple-600 transition" aria-label="ব্যবস্থাপনা"
+                                data-i18n="nav_management">ব্যবস্থাপনা</a></li>
+                        <li><a href="#gallery" class="hover:text-purple-600 transition" aria-label="গ্যালারি"
+                                data-i18n="nav_gallery">গ্যালারি</a></li>
+                        <li><a href="#contact" class="hover:text-purple-600 transition" aria-label="যোগাযোগ"
+                                data-i18n="nav_contact">যোগাযোগ</a></li>
+                        <li><a href="./notice.html" class="hover:text-purple-600 transition" aria-label="নোটিশ"
+                                data-i18n="nav_notice">নোটিশ</a></li>
+                    </ul>
+                    <button onclick="toggleLanguage()"
+                        class="border border-purple-600 text-purple-600 px-3 py-1 rounded-full hover:bg-purple-600 hover:text-white transition font-bold text-sm">
+                        <span id="lang-btn-text-desktop">ENGLISH</span>
+                    </button>
+                </div>
+
+                <div class="md:hidden flex items-center gap-4">
+                    <button onclick="toggleLanguage()"
+                        class="border border-purple-600 text-purple-600 px-2 py-1 rounded text-xs font-bold">
+                        <span id="lang-btn-text-mobile">EN</span>
+                    </button>
+
+                    <button id="mobile-menu-btn" class="text-2xl text-gray-700" aria-label="মেনু টগল করুন"
+                        aria-expanded="false">
+                        <i class="fas fa-bars" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+
+        <div id="mobile-menu" class="mobile-menu md:hidden mt-4">
+            <ul class="flex flex-col space-y-3">
+                <li><a href="#home" class="block py-2 hover:text-purple-600 transition" data-i18n="nav_home">হোম</a></li>
+                <li><a href="#about" class="block py-2 hover:text-purple-600 transition" data-i18n="nav_about">আমাদের
+                        সম্পর্কে</a></li>
+                <li><a href="#courses" class="block py-2 hover:text-purple-600 transition" data-i18n="nav_courses">কোর্স</a>
+                </li>
+                <li><a href="#management" class="block py-2 hover:text-purple-600 transition"
+                        data-i18n="nav_management">ব্যবস্থাপনা</a></li>
+                <li><a href="#gallery" class="block py-2 hover:text-purple-600 transition" data-i18n="nav_gallery">গ্যালারি</a>
+                </li>
+                <li><a href="#contact" class="block py-2 hover:text-purple-600 transition" data-i18n="nav_contact">যোগাযোগ</a>
+                </li>
+                <li><a href="./notice.html" class="block py-2 hover:text-purple-600 transition" data-i18n="nav_notice">নোটিশ</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="relative text-white py-20 h-[600px] flex items-center group overflow-hidden">
+
+            <div class="absolute inset-0 z-0">
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-100">
+                    <img src="https://ttcpirganj.com/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-02-at-22.31.43_498ace3a.jpg"
+                        class="w-full h-full object-cover" alt="Slide 1">
+                </div>
+
+                <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                    <img src="https://ttcpirganj.com/wp-content/uploads/2024/08/404695214_301384866134322_6272328714629949831_n.jpg"
+                        class="w-full h-full object-cover" alt="Slide 2">
+                </div>
+
+                <div class="absolute inset-0 bg-black/60  to-black/50"></div>
+            </div>
+
+            <button id="prevBtn"
+                class="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-purple-600 text-white p-3 md:p-4 rounded-full backdrop-blur-sm transition duration-300 opacity-0 group-hover:opacity-100">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </button>
+
+            <button id="nextBtn"
+                class="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-purple-600 text-white p-3 md:p-4 rounded-full backdrop-blur-sm transition duration-300 opacity-0 group-hover:opacity-100">
+                <i class="fas fa-chevron-right text-xl"></i>
+            </button>
+
+            <div class="container relative z-10 mx-auto px-4 text-center animate-fade-in">
+                <i class="fas fa-award text-6xl mb-6 text-yellow-400" aria-hidden="true"></i>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 drop-shadow-md" data-i18n="hero_welcome">
+                    স্বাগতম পীরগঞ্জ কারিগরি প্রশিক্ষণ কেন্দ্রে
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 drop-shadow-md" data-i18n="hero_slogan">
+                    "প্রবাসী কর্মীরা উন্নয়নের অংশীদার সমুন্নত রাখবো তাদের অধিকার"
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#courses"
+                        class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center shadow-lg">
+                        <i class="fas fa-book-open mr-2" aria-hidden="true"></i>
+                        <span data-i18n="btn_view_courses">কোর্স দেখুন</span>
+                    </a>
+                    <a href="#contact"
+                        class="bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition inline-flex items-center justify-center shadow-lg">
+                        <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                        <span data-i18n="btn_contact">যোগাযোগ করুন</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- hero section -->
+        <!-- Important Notice section -->
+        <section class="bg-yellow-50 border-l-4 border-yellow-400 py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex items-start gap-4">
+                    <i class="fas fa-bullhorn text-3xl text-yellow-600 mt-1" aria-hidden="true"></i>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3" data-i18n="notice_head">গুরুত্বপূর্ণ বিজ্ঞপ্তি
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed" data-i18n="notice_body">
+                            প্রবাসী কল্যাণ ও বৈদেশিক কর্মসংস্থান মন্ত্রণালয়ের অধীনে জনশক্তি, কর্মস্থান ও প্রশিক্ষণ
+                            ব্যুরো কর্তৃক পরিচালিত কারিগরি প্রশিক্ষণ কেন্দ্র (টিটিসি), পীরগঞ্জ নিম্নে বর্ণিত কোর্স সমূহ
+                            সরকারি খরচে শুধুমাত্র বেকার যুব পুরুষ ও মহিলা, অনগ্রসর, হতদরিদ্র, সুবিধা বঞ্চিত, উপজাতি এবং
+                            প্রতিবন্ধীদের কর্মসংস্থানের লক্ষ্যে ASSET প্রকল্পের আওতায় <strong>০৩ মাস/৩৬০ ঘন্টা</strong>
+                            মেয়াদী <strong>আগস্ট-নভেম্বর/২০২৫</strong> খ্রি. সেশনে ভর্তি ইচ্ছুক প্রশিক্ষণার্থীদের নিকট
+                            হতে নির্ধারিত ফরমে আবেদন আহ্বান করা যাচ্ছে।
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Important Notice section -->
+        <!-- about us -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="about_title">আমাদের
+                        সম্পর্কে</h2>
+                    <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center card-hover bg-gray-50 p-6 rounded-lg">
+                        <i class="fas fa-users text-5xl text-purple-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="about_card1_title">দক্ষ প্রশিক্ষক</h3>
+                        <p class="text-gray-600" data-i18n="about_card1_desc">অভিজ্ঞ ও দক্ষ প্রশিক্ষকদের তত্ত্বাবধানে
+                            আধুনিক প্রশিক্ষণ</p>
+                    </div>
+                    <div class="text-center card-hover bg-gray-50 p-6 rounded-lg">
+                        <i class="fas fa-certificate text-5xl text-purple-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="about_card2_title">সরকারি সার্টিফিকেট</h3>
+                        <p class="text-gray-600" data-i18n="about_card2_desc">সরকার অনুমোদিত সার্টিফিকেট প্রদান</p>
+                    </div>
+                    <div class="text-center card-hover bg-gray-50 p-6 rounded-lg">
+                        <i class="fas fa-hand-holding-usd text-5xl text-purple-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="about_card3_title">বিনামূল্যে প্রশিক্ষণ</h3>
+                        <p class="text-gray-600" data-i18n="about_card3_desc">সম্পূর্ণ বিনামূল্যে প্রশিক্ষণ সুবিধা ও
+                            ভাতা</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about us -->
+        <!-- Course Section -->
+        <section id="courses" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="courses_title">আমাদের কোর্স
+                        সমূহ</h2>
+                    <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <!-- course no1 -->
+                    <div
+                        class="bg-white py-6 w-[400px] flex  flex-col justify-center items-center px-6 rounded-lg shadow-lg card-hover">
+                        <i class="fas fa-bolt text-4xl text-yellow-500 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="course_1_title">ইলেকট্রিক্যাল</h3>
+                        <p class="text-gray-600" data-i18n="course_1_desc">ইলেকট্রিক্যাল সম্পর্কিত সকল প্রশিক্ষণ</p>
+                    </div>
+                    <!-- course no2 -->
+                    <div
+                        class="bg-white py-6 w-[400px] flex  flex-col justify-center items-center px-6 rounded-lg shadow-lg card-hover">
+                        <i class="fas fa-mobile-alt text-4xl text-blue-500 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="course_2_title">মোবাইল সার্ভিসিং</h3>
+                        <p class="text-gray-600" data-i18n="course_2_desc">মোবাইল মেরামত ও সার্ভিসিং প্রশিক্ষণ</p>
+                    </div>
+                    <!-- course no3 -->
+                    <div
+                        class="bg-white py-6 w-[400px] flex  flex-col justify-center items-center px-6 rounded-lg shadow-lg card-hover">
+                        <i class="fas fa-laptop-code text-4xl text-green-500 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="course_3_title">কম্পিউটার অপারেশন</h3>
+                        <p class="text-gray-600" data-i18n="course_3_desc">কম্পিউটার ব্যবহার ও অপারেশন প্রশিক্ষণ</p>
+                    </div>
+                    <!-- course no4 -->
+                    <div
+                        class="bg-white py-6 w-[400px] flex  flex-col justify-center items-center px-6 rounded-lg shadow-lg card-hover">
+                        <i class="fas fa-palette text-4xl text-pink-500 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="course_4_title">গ্রাফিক্স ডিজাইন</h3>
+                        <p class="text-gray-600" data-i18n="course_4_desc">আধুনিক গ্রাফিক্স ডিজাইন প্রশিক্ষণ</p>
+                    </div>
+                    <!-- course no5 -->
+                    <div
+                        class="bg-white py-6 w-[400px] flex  flex-col justify-center items-center px-6 rounded-lg shadow-lg card-hover">
+                        <i class="fas fa-car text-4xl text-red-500 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="course_5_title">মোটর ড্রাইভিং</h3>
+                        <p class="text-gray-600" data-i18n="course_5_desc">মোটর গাড়ি চালনা প্রশিক্ষণ</p>
+                    </div>
+                    <!-- course no6 -->
+                    <div
+                        class="bg-white py-6 w-[400px] flex  flex-col justify-center items-center px-6 rounded-lg shadow-lg card-hover">
+                        <i class="fas fa-tools text-4xl text-gray-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="course_6_title">অন্যান্য ট্রেড</h3>
+                        <p class="text-gray-600" data-i18n="course_6_desc">আরও বিভিন্ন ধরনের কারিগরি প্রশিক্ষণ</p>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="#"
+                        class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition inline-flex justify-center items-center gap-2">
+                        <span data-i18n="btn_more">আরো</span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Course Section -->
+        <!-- Notice Section -->
+        <section id="notices" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+
+                        <span data-i18n="all_notices_title">সকল বিজ্ঞপ্তি</span>
+                    </h2>
+                    <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+                    <p class="mt-4 text-gray-600" data-i18n="all_notices_sub">আমাদের সর্বশেষ বিজ্ঞপ্তি এবং ঘোষণা</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Card 1 -->
+                    <div class="bg-white border-2 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2  max-w-[300px]" data-i18n="n1_title">
+                                আগস্ট-নভেম্বর/২০২৫ সেশনে ভর্তি
+                            </h3>
+                            <div class="flex flex-col items-end gap-2 mb-4">
+                                <span
+                                    class="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-2">
+                                    <i class="fas fa-fire"></i>
+                                    <span data-i18n="badge_new">নতুন</span>
+                                </span>
+                                <span class="text-gray-500 text-sm" data-i18n="n1_date">০৮ ডিসেম্বর, ২০২৫</span>
+                            </div>
+                        </div>
+
+
+                        <p class="text-gray-700 mb-4 line-clamp-3" data-i18n="n1_desc">
+                            ASSET প্রকল্পের আওতায় ০৩ মাস/৩৬০ ঘন্টা মেয়াদী প্রশিক্ষণ কোর্সে ভর্তির জন্য আবেদন আহ্বান
+                            করা হচ্ছে।
+                        </p>
+                        <a href="#" class="text-red-600 font-semibold hover:text-red-700 inline-flex items-center">
+                            <span data-i18n="read_details">বিস্তারিত দেখুন</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white border-2 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 max-w-[300px]" data-i18n="n2_title">৭ম
+                                সাইকেল চূড়ান্ত ফলাফল</h3>
+                            <div class="flex flex-col items-end gap-2 mb-4">
+                                <span
+                                    class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-2">
+                                    <i class="fas fa-trophy"></i>
+                                    <span data-i18n="badge_result">ফলাফল</span>
+                                </span>
+                                <span class="text-gray-500 text-sm" data-i18n="n2_date">২৫ নভেম্বর, ২০২৫</span>
+                            </div>
+                        </div>
+
+
+                        <p class="text-gray-700 mb-4" data-i18n="n2_desc">
+                            ৭ম সাইকেল প্রশিক্ষণের চূড়ান্ত ফলাফল প্রকাশ করা হয়েছে।
+                        </p>
+                        <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
+                            <span data-i18n="see_result">ফলাফল দেখুন</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white border-2 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 max-w-[300px]" data-i18n="n3_title">লিখিত
+                                পরীক্ষার ফলাফল</h3>
+                            <div class="flex flex-col items-end gap-2 mb-4">
+                                <span
+                                    class="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-2">
+                                    <i class="fas fa-pen"></i>
+                                    <span data-i18n="badge_exam">পরীক্ষা</span>
+                                </span>
+                                <span class="text-gray-500 text-sm" data-i18n="n3_date">২০ নভেম্বর, ২০২৫</span>
+                            </div>
+                        </div>
+
+
+                        <p class="text-gray-700 mb-4" data-i18n="n3_desc">
+                            আগামী সেশনের লিখিত পরীক্ষার ফলাফল প্রকাশ করা হয়েছে।
+                        </p>
+                        <a href="#" class="text-green-600 font-semibold hover:text-green-700 inline-flex items-center">
+                            <span data-i18n="read_more">বিস্তারিত পড়ুন</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white border-2 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 max-w-[300px]" data-i18n="n4_title">RPL
+                                প্রোগ্রাম চালু</h3>
+                            <div class="flex flex-col items-end gap-2 mb-4">
+                                <span
+                                    class="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-2">
+                                    <i class="fas fa-certificate"></i> RPL
+                                </span>
+                                <span class="text-gray-500 text-sm" data-i18n="n4_date">১৫ নভেম্বর, ২০২৫</span>
+                            </div>
+                        </div>
+
+
+                        <p class="text-gray-700 mb-4" data-i18n="n4_desc">
+                            অভিজ্ঞ কর্মীদের জন্য Recognition of Prior Learning প্রোগ্রাম।
+                        </p>
+                        <a href="#"
+                            class="text-purple-600 font-semibold hover:text-purple-700 inline-flex items-center">
+                            <span data-i18n="apply_now">আবেদন করুন</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="bg-white border-2 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 max-w-[300px]" data-i18n="n5_title">
+                                দেশ-বিদেশ চাকরির সুযোগ</h3>
+                            <div class="flex flex-col items-end gap-2 mb-4">
+                                <span
+                                    class="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-2">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span data-i18n="badge_job">চাকরি</span>
+                                </span>
+                                <span class="text-gray-500 text-sm" data-i18n="n5_date">১০ নভেম্বর, ২০২৫</span>
+                            </div>
+                        </div>
+
+
+                        <p class="text-gray-700 mb-4" data-i18n="n5_desc">
+                            প্রশিক্ষণপ্রাপ্ত প্রশিক্ষণার্থীদের জন্য চাকরির সুযোগ।
+                        </p>
+                        <a href="#"
+                            class="text-orange-600 font-semibold hover:text-orange-700 inline-flex items-center">
+                            <span data-i18n="submit_cv">সিভি জমা দিন</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="bg-white border-2 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2 max-w-[300px]" data-i18n="n6_title">ক্লাস
+                                রুটিন আপডেট</h3>
+                            <div class="flex flex-col items-end gap-2">
+                                <span
+                                    class="bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-2">
+                                    <i class="fas fa-clock"></i>
+                                    <span data-i18n="badge_schedule">সময়সূচি</span>
+                                </span>
+                                <span class="text-gray-500 text-sm" data-i18n="n6_date">০৫ নভেম্বর, ২০২৫</span>
+                            </div>
+                        </div>
+
+
+                        <p class="text-gray-700 mb-4" data-i18n="n6_desc">
+                            নতুন সেশনের ক্লাস রুটিন প্রকাশ করা হয়েছে।
+                        </p>
+                        <a href="#" class="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
+                            <span data-i18n="download_routine">রুটিন ডাউনলোড</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="./notice.html"
+                        class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition inline-flex items-center gap-2">
+                        <i class="fas fa-sync-alt"></i>
+                        <span data-i18n="btn_more_notices">আরও বিজ্ঞপ্তি দেখুন</span>
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notice Section -->
+        <!-- Requirements and 
+Facilities Section -->
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-center gap-10 md:gap-[200px]">
+                    <div class="flex flex-col">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-file-alt mr-3 text-purple-600" aria-hidden="true"></i>
+                            <span data-i18n="req_title">ভর্তির প্রয়োজনীয় কাগজপত্র</span>
+                        </h2>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="req_1">জাতীয় পরিচয়পত্র/জন্মসনদের ডিজিটাল সত্যায়িত অনুলিপি</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="req_2">সদ্য তোলা পাসপোর্ট সাইজের ছবি ২ কপি</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="req_3">সকল শিক্ষাগত যোগ্যতার সনদের সত্যায়িত অনুলিপি</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="req_4">আবেদনপত্রে অবশ্যই মোবাইল নম্বর থাকতে হবে</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="req_5">বৈদেশিক চাকুরীর প্রার্থীদের পাসপোর্টের ফটোকপি</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="req_6">নাগরিকত্ব সনদপত্রের কপি</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-gift mr-3 text-purple-600" aria-hidden="true"></i>
+                            <span data-i18n="facilities_title">সুযোগ সুবিধা</span>
+                        </h2>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-money-bill-wave text-green-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="fac_1">প্রতিমাসে ১,৫০০/-টাকা (পুরুষ) এবং ২,০০০ টাকা (নারী) প্রশিক্ষণ
+                                    ভাতা</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-bus text-blue-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="fac_2">দৈনিক ৮৮/-টাকা হারে মাসিক যাতায়াত ভাতা</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-yellow-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="fac_3">হতদরিদ্র ও মুক্তিযোদ্ধার সন্তানদের অগ্রাধিকার</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-book text-purple-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="fac_4">সরকারি সার্টিফিকেট প্রদান</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-briefcase text-red-500 mt-1 mr-3" aria-hidden="true"></i>
+                                <span data-i18n="fac_5">কর্মসংস্থানের সুযোগ</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="#contact"
+                        class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition inline-flex items-center">
+                        <i class="fas fa-download mr-2" aria-hidden="true"></i>
+                        <span data-i18n="download_form">আবেদন ফর্ম ডাউনলোড করুন</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Requirements and 
+        Facilities Section -->
+        <!-- Management Section -->
+        <section id="management" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="mgmt_title">আমাদের
+                        ব্যবস্থাপনা</h2>
+                    <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+                </div>
+                <div class="flex flex flex-wrap justify-center items-center gap-10">
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/11/Principal-sir-pic-1617x2048.jpg"
+                                alt="Md_Zia_Uddin" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="p_name">মোঃ জিয়া উদ্দিন</h3>
+                        <p class="text-purple-600 font-semibold mb-2" data-i18n="p_role">প্রিন্সিপাল</p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01713412599" data-i18n="p_phone">০১৭১৩-৪১২৫৯৯</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/Screenshot-2025-08-03-011853-768x675.png"
+                                alt="Md_Mukul_Mia" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="ha_name">মোঃ মুকুল মিয়া</h3>
+                        <p class="text-green-600 font-semibold mb-2" data-i18n="ha_role">হেড অ্যাসিস্ট্যান্ট</p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01717486576" data-i18n="ha_phone">০১৭১৭-৪৮৬৫৭৬</a>
+                        </p>
+                    </div>
+
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-28-at-16.02.56_0e3a7b9f-767x1024.jpg"
+                                alt="Mashiur_Rahman" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="e1_name">মোঃ মশিউর রহমান</h3>
+                        <p class="text-yellow-600 font-semibold mb-2" data-i18n="e1_role">ইলেকট্রিক্যাল ইন্সট্রাক্টর</p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01834458761" data-i18n="e1_phone">০১৮৩৪-৪৫৮৭৬১</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-28-at-16.15.42_6c5ee599-150x150.jpg"
+                                alt="Md_Tanvir_Biswas" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="e2_name">মোঃ তানভীর বিশ্বাস</h3>
+                        <p class="text-yellow-600 font-semibold mb-2" data-i18n="e2_role">ইলেকট্রিক্যাল ইন্সট্রাক্টর</p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01717483126" data-i18n="e2_phone">০১৭১৭-৪৮৩১২৬</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/Screenshot-2025-08-03-091022-298x300.png"
+                                alt="Md_Shohag_Mia" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="g1_name">মোঃ শোহাগ মিয়া</h3>
+                        <p class="text-pink-600 font-semibold mb-2" data-i18n="g1_role">গ্রাফিক্স ডিজাইন ইন্সট্রাক্টর
+                        </p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01713983344" data-i18n="g1_phone">০১৭১৩-৯৮৩৩৪৪</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-pink-400 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-17-at-08.19.20_3d4efe20-233x300.jpg"
+                                alt="Md_Nazmul_Haque" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="g2_name">এন.এম. নাজমুল হক</h3>
+                        <p class="text-pink-600 font-semibold mb-2" data-i18n="g2_role">গ্রাফিক্স ডিজাইন ইন্সট্রাক্টর
+                        </p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01744479601" data-i18n="g2_phone">০১৭৪৪-৪৭৯৬০১</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-pink-400 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-28-at-16.08.12_9bbe1725-250x300.jpg"
+                                alt="A.B.M_Faruk_Hasan" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="m1_name">এ.বি.এম ফারুক হাসান</h3>
+                        <p class="text-blue-600 font-semibold mb-2" data-i18n="m1_role">মোবাইল সার্ভিসিং ইন্সট্রাক্টর
+                        </p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01737243273" data-i18n="m1_phone">০১৭৩৭-২৪৩২৭৩</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-pink-400 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-28-at-16.15.07_3320709b-202x300.jpg"
+                                alt="Md._Asaduzzaman_Jewel" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="m2_name">মোঃ আসাদুজ্জামান জুয়েল</h3>
+                        <p class="text-blue-600 font-semibold mb-2" data-i18n="m2_role">মোবাইল সার্ভিসিং ইন্সট্রাক্টর
+                        </p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01750115780" data-i18n="m2_phone">০১৭৫০-১১৫৭৮০</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-pink-400 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-18-at-16.22.38_0a0ab5f3-276x300.jpg"
+                                alt="Mosammat_Shakila_Akter" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="c1_name">মোসাম্মৎ শাকিলা আক্তার</h3>
+                        <p class="text-green-600 font-semibold mb-2" data-i18n="c1_role">কম্পিউটার অপারেশন ইন্সট্রাক্টর
+                        </p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01721215924" data-i18n="c1_phone">০১৭২১-২১৫৯২৪</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-red-400 to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/11/muna-240x300.jpg"
+                                alt="Md._Mehedi_Hasan_Munna" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="d1_name">মোঃ মেহেদী হাসান (মুন্না)</h3>
+                        <p class="text-red-600 font-semibold mb-2" data-i18n="d1_role">মোটর ড্রাইভিং ইন্সট্রাক্টর</p>
+                        <p class="text-gray-600">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01761077900" data-i18n="d1_phone">০১৭৬১-০৭৭৯০০</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-6 px-24 rounded-lg shadow-lg text-center card-hover">
+                        <div
+                            class="w-[200px] h-[210px] bg-gradient-to-br from-pink-400 to-pink-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <img src="https://ttcpirganj.com/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-20-at-02.43.25_9ba5c1d0-266x300.jpg"
+                                alt="Md._Shahjahan_Mia" class="w-full h-full rounded-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" data-i18n="ct_name">মোঃ শাহাজাহান মিয়া</h3>
+                        <p class="text-blue-600 font-semibold mb-2" data-i18n="ct_role">কেয়ারটেকার</p>
+                        <p class="text-gray-600 mb-1">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:01751849925" data-i18n="ct_phone">০১৭৫১-৮৪৯৯২৫</a>
+                        </p>
+                        <p class="text-gray-600 text-sm">
+                            <i class="fas fa-envelope mr-2" aria-hidden="true"></i>
+                            shahajahanmia81@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Management Section -->
+        <!-- Image Gallery Section -->
+        <section id="gallery" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="gallery_title">আমাদের
+                        গ্যালারি</h2>
+                    <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div
+                        class="bg-gray-200 h-64 w-90 rounded-lg overflow-hidden card-hover flex items-center justify-center group">
+                        <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/20240924_124058-300x225.jpg"
+                            alt="Gallery Image"
+                            class="gallery-img w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="bg-gray-200 h-64 w-90 rounded-lg overflow-hidden card-hover flex items-center justify-center group">
+                        <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-01-01-at-6.45.52-PM-768x346.jpeg"
+                            alt="Gallery Image"
+                            class="gallery-img w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="bg-gray-200 h-64 w-90 rounded-lg overflow-hidden card-hover flex items-center justify-center group">
+                        <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/20240630_161152-768x576.jpg"
+                            alt="Gallery Image"
+                            class="gallery-img w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="bg-gray-200 h-64 w-90 rounded-lg overflow-hidden card-hover flex items-center justify-center group">
+                        <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/WhatsApp-Image-2024-09-30-at-22.53.03_f2683b4a-1024x768.jpg"
+                            alt="Gallery Image"
+                            class="gallery-img w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="bg-gray-200 h-64 w-90 rounded-lg overflow-hidden card-hover flex items-center justify-center group">
+                        <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/IMG-20240803-WA0002-768x576.jpg"
+                            alt="Gallery Image"
+                            class="gallery-img w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-110">
+                    </div>
+
+                    <div
+                        class="bg-gray-200 h-64 w-90 rounded-lg overflow-hidden card-hover flex items-center justify-center group">
+                        <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/20240812_154029-1024x768.jpg"
+                            alt="Gallery Image"
+                            class="gallery-img w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="bg-gray-200 h-64 w-90 rounded-lg overflow-hidden card-hover flex items-center justify-center group">
+                        <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/IMG-20241119-WA00051-1024x575.jpg"
+                            alt="Gallery Image"
+                            class="gallery-img w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-110">
+                    </div>
+                    <div
+                        class="bg-gray-200 h-64 w-90 rounded-lg overflow-hidden card-hover flex items-center justify-center group">
+                        <img src="https://ttcpirganj.com/wp-content/uploads/2025/08/WhatsApp-Image-2025-01-01-at-2.07.47-PM1-1024x461.jpeg"
+                            alt="Gallery Image"
+                            class="gallery-img w-full h-full object-cover cursor-pointer transition duration-500 group-hover:scale-110">
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- Image Gallery Section -->
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" data-i18n="contact_title">যোগাযোগ করুন
+                    </h2>
+                    <div class="w-24 h-1 bg-purple-600 mx-auto"></div>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <div class="bg-white py-8 w-[300px] rounded-lg shadow-lg text-center card-hover">
+                        <i class="fas fa-phone text-5xl text-purple-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="contact_phone_title">ফোন</h3>
+                        <p class="text-gray-600">
+                            <a href="tel:+8801842196566" data-i18n="contact_phone_num">+৮৮০১৮৪২১৯৬৫৬৬</a>
+                        </p>
+                    </div>
+                    <div class="bg-white py-8 w-[300px] rounded-lg shadow-lg text-center card-hover">
+                        <i class="fas fa-envelope text-5xl text-purple-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-semibold mb-3" data-i18n="contact_email_title">ইমেইল</h3>
+                        <p class="text-gray-600">
+                            <a href="mailto:ttcpirganj@gmail.com">ttcpirganj@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="flex flex-col justify-center items-center">
+                    <img src="https://ttcpirganj.com/wp-content/uploads/2024/08/TTC-Pirganj-Logo-768x768.png" alt=""
+                        class=" w-24 mb-4">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center" data-i18n="footer_logo_text">
+                        
+                        টিটিসি পীরগঞ্জ
+                    </h3>
+                    <p class="text-gray-400 text-center" data-i18n="footer_desc">কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ, রংপুর </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-i18n="footer_ql_title">দ্রুত লিংক</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition"
+                                data-i18n="nav_about">আমাদের সম্পর্কে</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition"
+                                data-i18n="nav_courses">কোর্স সমূহ</a></li>
+                        <li><a href="#management" class="text-gray-400 hover:text-white transition"
+                                data-i18n="nav_management">ব্যবস্থাপনা</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition"
+                                data-i18n="nav_contact">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-i18n="footer_contact_title">যোগাযোগের তথ্য</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2" aria-hidden="true"></i>
+                            <span data-i18n="footer_address">মকিমপুর, পীরগঞ্জ, রংপুর</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:+8801842196566" data-i18n="contact_phone_num">+৮৮০১৮৪২১৯৬৫৬৬</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2" aria-hidden="true"></i>
+                            <a href="mailto:ttcpirganj@gmail.com">ttcpirganj@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4" data-i18n="footer_social_title">সোশ্যাল মিডিয়া</h4>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition"
+                            aria-label="ফেসবুক">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition"
+                            aria-label="টুইটার">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition"
+                            aria-label="ইউটিউব">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p data-i18n="footer_copy">&copy; ২০২৪ কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="imageModal"
+        class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <button id="closeModal"
+            class="absolute top-5 right-5 text-white hover:text-purple-400 transition transform hover:scale-110 z-50">
+            <i class="fas fa-times text-4xl"></i>
+        </button>
+        <img id="modalImage" src="" alt="Full view"
+            class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300">
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
