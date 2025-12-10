@@ -35,7 +35,7 @@ const translations = {
     // Badges & Actions
     badge_new: "নতুন",
     download_pdf: "পিডিএফ ডাউনলোড",
-    view_details: "বিস্তারিত",
+    view_details: "বিস্তারিত দেখুন",
     apply_now: "আবেদন করুন",
     no_results: "দুঃখিত, কোনো বিজ্ঞপ্তি পাওয়া যায়নি।",
 
@@ -85,7 +85,7 @@ const translations = {
     // Badges & Actions
     badge_new: "New",
     download_pdf: "Download PDF",
-    view_details: "Details",
+    view_details: "View Details",
     apply_now: "Apply Now",
     no_results: "Sorry, no notices found.",
 
@@ -108,25 +108,21 @@ let allNotices = [];
 let categoriesData = {};
 
 // --- TOGGLE LANGUAGE (RESTORED) ---
-// This function is required because loader.js calls window.toggleLanguage()
 window.toggleLanguage = function () {
   const currentLang = localStorage.getItem("lang") || "bn";
   const newLang = currentLang === "bn" ? "en" : "bn";
 
   localStorage.setItem("lang", newLang);
 
-  // Update content immediately
   if (typeof window.updateContent === "function") {
     window.updateContent();
   }
 };
 
-// --- UPDATE CONTENT (Overwrites loader.js version for this page) ---
+// --- UPDATE CONTENT ---
 window.updateContent = function () {
-  // 1. Get the latest language from storage
   currentLang = localStorage.getItem("lang") || "bn";
 
-  // 2. Update all standard text elements (header/footer/static)
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
     if (translations[currentLang][key]) {
@@ -134,7 +130,6 @@ window.updateContent = function () {
     }
   });
 
-  // 3. Update placeholders
   document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
     const key = element.getAttribute("data-i18n-placeholder");
     if (translations[currentLang][key]) {
@@ -142,16 +137,11 @@ window.updateContent = function () {
     }
   });
 
-  // 4. Update Filter Dropdown Options
   populateFilters();
-
-  // 5. Re-render the Dynamic Notice List
   renderNotices(filterNotices());
 
-  // 6. Update HTML lang attribute
   document.documentElement.lang = currentLang;
 
-  // 7. Update language toggle button text
   const btnText = currentLang === "bn" ? "ENGLISH" : "বাংলা";
   const btnTextMobile = currentLang === "bn" ? "EN" : "BN";
   const desktopBtn = document.getElementById("lang-btn-text-desktop");
@@ -167,10 +157,8 @@ async function loadNotices() {
     const data = await response.json();
     allNotices = data.notices;
     categoriesData = data.categories;
-    // Initial Render
     renderNotices(allNotices);
     populateFilters();
-    // Update content to ensure static text matches loaded lang
     window.updateContent();
   } catch (error) {
     console.error("Error loading notices:", error);
@@ -183,12 +171,10 @@ function populateFilters() {
   const categoryFilter = document.getElementById("category-filter");
   if (!categoryFilter) return;
 
-  const currentSelection = categoryFilter.value; // Save selection
+  const currentSelection = categoryFilter.value;
 
-  // Clear existing options except "All"
   categoryFilter.innerHTML = `<option value="all" data-i18n="filter_all">${translations[currentLang].filter_all}</option>`;
 
-  // Add category options
   if (categoriesData) {
     Object.keys(categoriesData).forEach((catKey) => {
       const option = document.createElement("option");
@@ -199,7 +185,6 @@ function populateFilters() {
     });
   }
 
-  // Restore selection if valid, otherwise default to all
   categoryFilter.value = currentSelection;
 }
 
@@ -292,22 +277,29 @@ function renderNotices(notices) {
         categoriesData[notice.category]?.[currentLang] || notice.category;
 
       let actionButtons = "";
+
+      // বিস্তারিত দেখুন বাটন (সবসময় দেখাবে)
+      actionButtons += `
+        <a href="notice-details.html?id=${notice.id}" class="text-purple-600 font-semibold hover:text-purple-800 transition flex items-center group">
+          <i class="fas fa-eye mr-2 group-hover:scale-110 transition-transform"></i> 
+          <span>${translations[currentLang].view_details}</span>
+        </a>`;
+
+      // PDF ডাউনলোড বাটন
       if (notice.pdfLink) {
         actionButtons += `
-        <a href="${notice.pdfLink}" class="text-purple-600 font-semibold hover:text-purple-800 transition flex items-center">
-          <i class="fas fa-file-pdf mr-2"></i> <span>${translations[currentLang].download_pdf}</span>
+        <a href="${notice.pdfLink}" target="_blank" class="text-red-600 font-semibold hover:text-red-800 transition flex items-center ml-4 group">
+          <i class="fas fa-file-pdf mr-2 group-hover:scale-110 transition-transform"></i> 
+          <span>${translations[currentLang].download_pdf}</span>
         </a>`;
       }
-      if (notice.detailsLink) {
-        actionButtons += `
-        <a href="${notice.detailsLink}" class="text-gray-500 font-semibold hover:text-gray-700 transition flex items-center ml-4">
-          <i class="fas fa-eye mr-2"></i> <span>${translations[currentLang].view_details}</span>
-        </a>`;
-      }
+
+      // আবেদন করুন বাটন
       if (notice.applyLink) {
         actionButtons += `
-        <a href="${notice.applyLink}" class="text-purple-600 font-semibold hover:text-purple-800 transition flex items-center">
-          <i class="fas fa-external-link-alt mr-2"></i> <span>${translations[currentLang].apply_now}</span>
+        <a href="${notice.applyLink}" target="_blank" class="text-green-600 font-semibold hover:text-green-800 transition flex items-center ml-4 group">
+          <i class="fas fa-external-link-alt mr-2 group-hover:scale-110 transition-transform"></i> 
+          <span>${translations[currentLang].apply_now}</span>
         </a>`;
       }
 
@@ -327,16 +319,18 @@ function renderNotices(notices) {
           <div class="flex flex-wrap items-center gap-3 mb-2">
             ${
               notice.isNew
-                ? `<span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-bold">${translations[currentLang].badge_new}</span>`
+                ? `<span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs font-bold animate-pulse">${translations[currentLang].badge_new}</span>`
                 : ""
             }
             <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-bold">
               <i class="fas fa-folder mr-1"></i> ${categoryName}
             </span>
           </div>
-          <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 hover:text-purple-600 transition cursor-pointer">
-            ${notice.title[currentLang]}
-          </h3>
+          <a href="notice-details.html?id=${notice.id}">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3 hover:text-purple-600 transition cursor-pointer">
+              ${notice.title[currentLang]}
+            </h3>
+          </a>
           <p class="text-gray-600 mb-4">${notice.description[currentLang]}</p>
           <div class="flex gap-4 flex-wrap">
             ${actionButtons}
@@ -387,12 +381,10 @@ function filterNotices() {
 
   let filtered = [...allNotices];
 
-  // Category filter
   if (categoryFilter !== "all") {
     filtered = filtered.filter((notice) => notice.category === categoryFilter);
   }
 
-  // Date filter
   if (dateFilter !== "all") {
     const now = new Date();
     const days = parseInt(dateFilter);
@@ -404,7 +396,6 @@ function filterNotices() {
     });
   }
 
-  // Search filter
   if (searchTerm) {
     filtered = filtered.filter((notice) => {
       const title = notice.title[currentLang].toLowerCase();
@@ -418,11 +409,8 @@ function filterNotices() {
 
 // --- DOM CONTENT LOADED ---
 document.addEventListener("DOMContentLoaded", () => {
-  // Load initial content
   loadNotices();
-  // We call loadNotices first, which fetches data and then calls updateContent.
 
-  // Event Listeners for filters
   const searchInput = document.getElementById("search-input");
   if (searchInput) {
     searchInput.addEventListener("input", () => {
@@ -444,7 +432,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Visual Pagination
   const paginationLinks = document.querySelectorAll(".pagination-nav a");
   paginationLinks.forEach((link) => {
     link.addEventListener("click", (e) => {

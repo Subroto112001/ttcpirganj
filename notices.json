@@ -6,15 +6,21 @@
       "category": "admission",
       "isNew": true,
       "title": {
-        "bn": "আগস্ট-নভেম্বর/২০২৫ সেশনে ভর্তি",
-        "en": "Admission for Aug-Nov 2025 Session"
+        "bn": "আগস্ট-নভেম্বর/২০২৫ সেশনে ভর্তি বিজ্ঞপ্তি",
+        "en": "Admission Notice for Aug-Nov 2025 Session"
       },
       "description": {
         "bn": "ASSET প্রকল্পের আওতায় ০৩ মাস/৩৬০ ঘন্টা মেয়াদী প্রশিক্ষণ কোর্সে ভর্তির জন্য আবেদন আহ্বান করা হচ্ছে।",
         "en": "Applications invited for 03 months/360 hours training course under ASSET project."
       },
-      "pdfLink": "#",
-      "detailsLink": "#"
+      "fullDescription": {
+        "bn": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>আবেদনের নিয়মাবলী:</h2><p class='mb-4'>১. আবেদনকারীকে অবশ্যই বাংলাদেশের স্থায়ী নাগরিক হতে হবে।</p><p class='mb-4'>২. শিক্ষাগত যোগ্যতার সনদপত্রের ফটোকপি এবং জাতীয় পরিচয়পত্রের ফটোকপি প্রয়োজন।</p><p class='mb-4'>৩. কোর্সের মেয়াদ: ০৩ মাস।</p><p class='mb-6'>৪. ক্লাস শুরু: ০১ জানুয়ারি ২০২৬।</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>গুরুত্বপূর্ণ তারিখ:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>আবেদন শুরু: ১০ ডিসেম্বর ২০২৫</li><li>আবেদনের শেষ: ২০ ডিসেম্বর ২০২৫</li><li>পরীক্ষা: ২২ ডিসেম্বর ২০২৫</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>উপলব্ধ কোর্সসমূহ:</h3><ul class='list-disc list-inside space-y-2'><li>ইলেকট্রিক্যাল ইনস্টলেশন এন্ড মেইনটেনেন্স</li><li>রেফ্রিজারেশন এন্ড এয়ার কন্ডিশনিং</li><li>মোবাইল ফোন সার্ভিসিং</li><li>কম্পিউটার অফিস এপ্লিকেশন</li></ul>",
+        "en": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>Application Rules:</h2><p class='mb-4'>1. Applicant must be a permanent citizen of Bangladesh.</p><p class='mb-4'>2. Photocopies of educational certificates and national ID card are required.</p><p class='mb-4'>3. Course duration: 03 months.</p><p class='mb-6'>4. Class starts: 01 January 2026.</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Important Dates:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>Application starts: 10 December 2025</li><li>Application ends: 20 December 2025</li><li>Exam: 22 December 2025</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Available Courses:</h3><ul class='list-disc list-inside space-y-2'><li>Electrical Installation & Maintenance</li><li>Refrigeration & Air Conditioning</li><li>Mobile Phone Servicing</li><li>Computer Office Application</li></ul>"
+      },
+      "pdfLink": "./assets/notices/notice_1_pdf.pdf",
+      "posterImage": "./assets/images/notice_1_poster.jpg",
+      "detailsLink": true,
+      "applyLink": ""
     },
     {
       "id": 2,
@@ -29,74 +35,124 @@
         "bn": "৭ম সাইকেল প্রশিক্ষণের চূড়ান্ত ফলাফল প্রকাশ করা হয়েছে।",
         "en": "Final result of 7th cycle training has been published."
       },
-      "pdfLink": "#"
+      "fullDescription": {
+        "bn": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>৭ম সাইকেল ফলাফল বিবরণ</h2><p class='mb-4'>অধ্যক্ষের কার্যালয় থেকে জানানো যাচ্ছে যে, সপ্তম সাইকেল প্রশিক্ষণের চূড়ান্ত ফলাফল শীট সংযুক্ত PDF ফাইলে পাওয়া যাবে।</p><p class='mb-4'>উত্তীর্ণ সকল শিক্ষার্থীকে অভিনন্দন জানাই।</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>ফলাফল পরিসংখ্যান:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>মোট পরীক্ষার্থী: ১২০ জন</li><li>উত্তীর্ণ: ১১৫ জন (৯৫.৮৩%)</li><li>A+ গ্রেড: ৪৫ জন</li><li>A গ্রেড: ৫০ জন</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>সার্টিফিকেট বিতরণ:</h3><p class='mb-4'>সার্টিফিকেট বিতরণ অনুষ্ঠান আগামী ১৫ ডিসেম্বর ২০২৫ তারিখে অনুষ্ঠিত হবে। উত্তীর্ণ শিক্ষার্থীরা সকাল ১০টায় উপস্থিত থাকার জন্য অনুরোধ করা হলো।</p>",
+        "en": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>7th Cycle Result Details</h2><p class='mb-4'>The final result sheet for the 7th cycle training is available in the attached PDF file.</p><p class='mb-4'>Congratulations to all successful candidates.</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Result Statistics:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>Total Examinees: 120</li><li>Passed: 115 (95.83%)</li><li>A+ Grade: 45</li><li>A Grade: 50</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Certificate Distribution:</h3><p class='mb-4'>Certificate distribution ceremony will be held on 15 December 2025. Successful candidates are requested to be present at 10 AM.</p>"
+      },
+      "pdfLink": "./assets/results/result_7th_cycle.pdf",
+      "posterImage": "",
+      "detailsLink": true,
+      "applyLink": ""
     },
     {
       "id": 3,
-      "date": "2025-11-20",
-      "category": "exam",
-      "isNew": false,
+      "date": "2025-12-05",
+      "category": "rpl",
+      "isNew": true,
       "title": {
-        "bn": "লিখিত পরীক্ষার ফলাফল",
-        "en": "Written Exam Result"
+        "bn": "আরপিএল (RPL) আবেদন গ্রহণের শেষ তারিখ বৃদ্ধি",
+        "en": "RPL Application Deadline Extended"
       },
       "description": {
-        "bn": "আগামী সেশনের লিখিত পরীক্ষার ফলাফল প্রকাশ করা হয়েছে।",
-        "en": "Written exam result for next session has been published."
+        "bn": "আরপিএল কোর্সের জন্য আবেদন জমা দেওয়ার সময়সীমা আগামী ১৫ ডিসেম্বর পর্যন্ত বাড়ানো হয়েছে।",
+        "en": "The deadline for submitting RPL course applications has been extended until December 15."
       },
-      "pdfLink": "#"
+      "fullDescription": {
+        "bn": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>আরপিএল কী?</h2><p class='mb-4'>RPL (Recognition of Prior Learning) এর মাধ্যমে পূর্ববর্তী কর্ম-অভিজ্ঞতা এবং দক্ষতার স্বীকৃতি দেওয়া হয়। এটি একটি আন্তর্জাতিকভাবে স্বীকৃত সার্টিফিকেশন প্রক্রিয়া।</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>বিস্তারিত তথ্য:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>নতুন আবেদনের শেষ তারিখ: ১৫ ডিসেম্বর ২০২৫</li><li>মূল্যায়নের তারিখ: ১৯ ডিসেম্বর ২০২৫</li><li>প্রয়োজনীয় কাগজপত্র: অভিজ্ঞতার সনদপত্র ও বায়োডাটা</li><li>ফি: ২,০০০ টাকা (নন-রিফান্ডেবল)</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>যোগ্যতা:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>ন্যূনতম ২ বছরের কর্ম অভিজ্ঞতা থাকতে হবে</li><li>সংশ্লিষ্ট ট্রেডে কাজের প্রমাণপত্র প্রয়োজন</li><li>বয়স: ১৮-৪৫ বছর</li></ul><p class='mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500'><strong>বিশেষ নোট:</strong> মূল্যায়ন সম্পন্ন হওয়ার পর যোগ্য প্রার্থীরা NTVQF সার্টিফিকেট পাবেন।</p>",
+        "en": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>What is RPL?</h2><p class='mb-4'>RPL (Recognition of Prior Learning) provides recognition for prior work experience and skills. It is an internationally recognized certification process.</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Details:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>New application deadline: 15 December 2025</li><li>Assessment Date: 19 December 2025</li><li>Required documents: Experience certificate and CV</li><li>Fee: 2,000 BDT (non-refundable)</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Eligibility:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>Minimum 2 years of work experience required</li><li>Proof of work in relevant trade needed</li><li>Age: 18-45 years</li></ul><p class='mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500'><strong>Special Note:</strong> After completion of assessment, qualified candidates will receive NTVQF certificate.</p>"
+      },
+      "pdfLink": "./assets/notices/notice_rpl_extension.pdf",
+      "posterImage": "./assets/images/notice_rpl_poster.jpg",
+      "detailsLink": true,
+      "applyLink": ""
     },
     {
       "id": 4,
-      "date": "2025-11-15",
-      "category": "rpl",
+      "date": "2025-11-01",
+      "category": "exam",
       "isNew": false,
       "title": {
-        "bn": "RPL প্রোগ্রাম চালু",
-        "en": "RPL Program Launched"
+        "bn": "৬ষ্ঠ সাইকেলের সেমিস্টার পরীক্ষার রুটিন প্রকাশ",
+        "en": "6th Cycle Semester Exam Routine Published"
       },
       "description": {
-        "bn": "অভিজ্ঞ কর্মীদের জন্য Recognition of Prior Learning প্রোগ্রাম।",
-        "en": "Recognition of Prior Learning program for experienced workers."
+        "bn": "৬ষ্ঠ সাইকেলের চূড়ান্ত সেমিস্টার পরীক্ষার বিস্তারিত সময়সূচী প্রকাশ করা হয়েছে।",
+        "en": "The detailed schedule for the 6th cycle final semester examination has been published."
       },
-      "applyLink": "#"
+      "fullDescription": {
+        "bn": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>পরীক্ষা সংক্রান্ত নির্দেশনা</h2><p class='mb-4'>অধ্যক্ষের নির্দেশক্রমে জানানো যাচ্ছে যে, সকল শিক্ষার্থীর জন্য ৬ষ্ঠ সাইকেলের সেমিস্টার পরীক্ষার রুটিন ওয়েবসাইটে আপলোড করা হয়েছে।</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>পরীক্ষার তারিখ:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>পরীক্ষা শুরু: ২৫ নভেম্বর ২০২৫</li><li>পরীক্ষা শেষ: ০৫ ডিসেম্বর ২০২৫</li><li>প্রতিদিন সকাল ১০টা থেকে ১২টা</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>পরীক্ষার নিয়মাবলী:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>পরীক্ষা শুরুর ৩০ মিনিট আগে পরীক্ষা কেন্দ্রে উপস্থিত থাকতে হবে</li><li>পরীক্ষা শুরুর ১৫ মিনিট পর কোনো পরীক্ষার্থীকে প্রবেশ করতে দেওয়া হবে না</li><li>অবশ্যই এডমিট কার্ড এবং ফটো আইডি সাথে আনতে হবে</li><li>মোবাইল ফোন পরীক্ষা হলে নেওয়া সম্পূর্ণ নিষিদ্ধ</li></ul><p class='mt-6 p-4 bg-red-50 rounded-lg border-l-4 border-red-500'><strong>গুরুত্বপূর্ণ:</strong> পরীক্ষা সংক্রান্ত যেকোনো তথ্যের জন্য অফিস কক্ষে যোগাযোগ করার অনুরোধ করা হলো।</p>",
+        "en": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>Examination Instructions</h2><p class='mb-4'>By the order of the Principal, the routine for the 6th cycle semester examination has been uploaded to the website for all students.</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Exam Dates:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>Exam starts: 25 November 2025</li><li>Exam ends: 05 December 2025</li><li>Daily from 10 AM to 12 PM</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Exam Rules:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>Must be present at exam center 30 minutes before exam starts</li><li>No candidate will be allowed to enter 15 minutes after exam starts</li><li>Must bring admit card and photo ID</li><li>Mobile phones are strictly prohibited in exam hall</li></ul><p class='mt-6 p-4 bg-red-50 rounded-lg border-l-4 border-red-500'><strong>Important:</strong> Please contact the office for any information regarding the exams.</p>"
+      },
+      "pdfLink": "./assets/exams/exam_routine_6th.pdf",
+      "posterImage": "",
+      "detailsLink": true,
+      "applyLink": ""
     },
     {
       "id": 5,
-      "date": "2025-11-10",
+      "date": "2025-12-07",
       "category": "job",
-      "isNew": false,
+      "isNew": true,
       "title": {
-        "bn": "দেশ-বিদেশ চাকরির সুযোগ",
-        "en": "Job Opportunities"
+        "bn": "ইন্সট্রাক্টর পদে নিয়োগ বিজ্ঞপ্তি",
+        "en": "Instructor Position Recruitment Notice"
       },
       "description": {
-        "bn": "প্রশিক্ষণপ্রাপ্ত প্রশিক্ষণার্থীদের জন্য চাকরির সুযোগ।",
-        "en": "Job opportunities for trained trainees in home and abroad."
+        "bn": "কারিগরি প্রশিক্ষণ কেন্দ্রে বিভিন্ন ট্রেডে ইন্সট্রাক্টর পদে নিয়োগের জন্য আবেদন আহ্বান।",
+        "en": "Applications are invited for Instructor positions in various trades at Technical Training Center."
       },
-      "pdfLink": "#"
+      "fullDescription": {
+        "bn": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>পদের বিবরণ</h2><p class='mb-4'>কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ এ নিম্নোক্ত পদে যোগ্য প্রার্থীদের কাছ থেকে আবেদন আহ্বান করা হচ্ছে।</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>খালি পদসমূহ:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>ইলেকট্রিক্যাল ইন্সট্রাক্টর - ০২ জন</li><li>রেফ্রিজারেশন ইন্সট্রাক্টর - ০১ জন</li><li>কম্পিউটার ইন্সট্রাক্টর - ০২ জন</li><li>মোবাইল সার্ভিসিং ইন্সট্রাক্টর - ০১ জন</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>যোগ্যতা:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>সংশ্লিষ্ট বিষয়ে ডিপ্লোমা/স্নাতক ডিগ্রি</li><li>ন্যূনতম ৩ বছরের শিক্ষকতা বা প্রশিক্ষণ অভিজ্ঞতা</li><li>বয়স: ২৫-৪০ বছর</li><li>বাংলা ও ইংরেজিতে দক্ষতা</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>বেতন স্কেল:</h3><p class='mb-4'>জাতীয় বেতন স্কেল অনুযায়ী ১৬,০০০-৩৮,৬৪০ টাকা</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>আবেদনের নিয়ম:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>আবেদনের শেষ তারিখ: ২৫ ডিসেম্বর ২০২৫</li><li>আবেদন পাঠানোর ঠিকানা: অধ্যক্ষ, টিটিসি পীরগঞ্জ</li><li>প্রয়োজনীয় কাগজপত্র: সিভি, সনদপত্র, অভিজ্ঞতার সার্টিফিকেট</li></ul>",
+        "en": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>Position Details</h2><p class='mb-4'>Technical Training Center, Pirganj invites applications from qualified candidates for the following positions.</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Vacant Positions:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>Electrical Instructor - 02 posts</li><li>Refrigeration Instructor - 01 post</li><li>Computer Instructor - 02 posts</li><li>Mobile Servicing Instructor - 01 post</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Qualifications:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>Diploma/Bachelor degree in relevant subject</li><li>Minimum 3 years teaching or training experience</li><li>Age: 25-40 years</li><li>Proficiency in Bengali and English</li></ul><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Salary Scale:</h3><p class='mb-4'>As per National Pay Scale: 16,000-38,640 BDT</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Application Procedure:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>Application deadline: 25 December 2025</li><li>Send application to: Principal, TTC Pirganj</li><li>Required documents: CV, certificates, experience certificates</li></ul>"
+      },
+      "pdfLink": "./assets/notices/job_circular_instructor.pdf",
+      "posterImage": "./assets/images/job_poster.jpg",
+      "detailsLink": true,
+      "applyLink": "https://forms.google.com/apply-instructor"
+    },
+    {
+      "id": 6,
+      "date": "2025-10-15",
+      "category": "exam",
+      "isNew": false,
+      "title": {
+        "bn": "৫ম সাইকেল প্রাক-নির্বাচনী পরীক্ষা",
+        "en": "5th Cycle Pre-Selection Exam"
+      },
+      "description": {
+        "bn": "৫ম সাইকেলের প্রাক-নির্বাচনী পরীক্ষা আগামী মাসে অনুষ্ঠিত হবে।",
+        "en": "5th cycle pre-selection examination will be held next month."
+      },
+      "fullDescription": {
+        "bn": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>প্রাক-নির্বাচনী পরীক্ষা সম্পর্কে</h2><p class='mb-4'>আগামী ৫ম সাইকেলে ভর্তির জন্য প্রাক-নির্বাচনী পরীক্ষা অনুষ্ঠিত হবে।</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>পরীক্ষার বিষয়:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>সাধারণ জ্ঞান - ২৫ নম্বর</li><li>গণিত - ৩০ নম্বর</li><li>ইংরেজি - ২৫ নম্বর</li><li>ট্রেড সংশ্লিষ্ট প্রশ্ন - ২০ নম্বর</li></ul>",
+        "en": "<h2 class='text-2xl font-bold text-gray-800 mb-4'>About Pre-Selection Exam</h2><p class='mb-4'>Pre-selection examination for admission to the upcoming 5th cycle will be held.</p><h3 class='text-xl font-bold text-gray-800 mb-3 mt-6'>Exam Subjects:</h3><ul class='list-disc list-inside space-y-2 mb-6'><li>General Knowledge - 25 marks</li><li>Mathematics - 30 marks</li><li>English - 25 marks</li><li>Trade related questions - 20 marks</li></ul>"
+      },
+      "pdfLink": "",
+      "posterImage": "",
+      "detailsLink": true,
+      "applyLink": ""
     }
   ],
   "categories": {
     "admission": {
       "bn": "ভর্তি",
       "en": "Admission",
-      "color": "red"
+      "color": "purple"
     },
     "result": {
       "bn": "ফলাফল",
       "en": "Result",
-      "color": "blue"
-    },
-    "exam": {
-      "bn": "পরীক্ষা",
-      "en": "Exam",
       "color": "green"
     },
     "rpl": {
       "bn": "RPL",
       "en": "RPL",
-      "color": "purple"
+      "color": "blue"
+    },
+    "exam": {
+      "bn": "পরীক্ষা",
+      "en": "Exam",
+      "color": "red"
     },
     "job": {
       "bn": "চাকরি",

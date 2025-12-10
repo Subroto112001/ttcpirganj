@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="নোটিশ বিস্তারিত - কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ">
+    <title data-i18n="page_title">নোটিশ বিস্তারিত | টিটিসি পীরগঞ্জ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/pages/index.css">
+    <style>
+        /* Reusing common animations and styles from your files */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.5s ease-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">মূল কন্টেন্টে যান</a>
+
+    <div id="header-placeholder" class="sticky top-0 z-50 w-full"></div>
+
+    <main id="main-content" class="flex-grow">
+
+        <section class="bg-purple-700 text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+            </div>
+            <div class="container mx-auto px-4 relative z-10 text-center animate-fade-in">
+                <i class="fas fa-bullhorn text-6xl mb-6"></i>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4" data-i18n="details_hero_title">নোটিশ বিস্তারিত</h1>
+                <p class="text-xl md:text-2xl" data-i18n="details_hero_desc">গুরুত্বপূর্ণ নোটিশের সম্পূর্ণ তথ্য</p>
+            </div>
+        </section>
+
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div id="notice-content-container" class="bg-white p-6 md:p-10 rounded-xl shadow-2xl">
+
+                    <div class="mb-6">
+                        <a href="notice.html"
+                            class="text-purple-600 hover:text-purple-800 font-semibold transition inline-flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i>
+                            <span data-i18n="back_to_notices">সকল নোটিশে ফিরে যান</span>
+                        </a>
+                    </div>
+
+                    <div class="lg:grid lg:grid-cols-3 lg:gap-10">
+
+                        <div class="lg:col-span-2">
+
+                            <span id="notice-category"
+                                class="inline-block bg-purple-100 text-purple-800 text-sm font-semibold px-4 py-1 rounded-full mb-3"
+                                data-i18n="category"></span>
+
+                            <h2 id="notice-title" class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4"></h2>
+
+                            <p class="text-sm text-gray-500 mb-8 flex flex-wrap items-center space-x-4">
+                                <span>
+                                    <i class="fas fa-calendar-alt mr-1"></i>
+                                    <span id="notice-date" data-i18n="date"></span>
+                                </span>
+                            </p>
+
+                            <div id="notice-description" class="prose max-w-none text-gray-700 space-y-6 text-lg">
+                            </div>
+
+                            <div id="download-section" class="mt-10 pt-4 border-t border-gray-100 hidden">
+                                <a id="pdf-download-link" href="#" target="_blank"
+                                    class="bg-purple-600 text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-purple-700 transition inline-flex items-center shadow-md hover:shadow-lg transform hover:scale-[1.02] duration-300">
+                                    <i class="fas fa-file-pdf mr-3"></i>
+                                    <span data-i18n="download_pdf">সম্পূর্ণ নোটিশ ডাউনলোড করুন (PDF)</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="lg:col-span-1 mt-10 lg:mt-0" id="poster-section-wrapper">
+                            <div id="poster-section" class="bg-gray-100 p-6 rounded-xl shadow-xl sticky top-24 hidden">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2"
+                                    data-i18n="poster_title">নোটিশ পোস্টার</h3>
+
+                                <img src="" alt="Notice Poster"
+                                    class="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-[1.01] cursor-pointer"
+                                    id="noticePosterImage">
+
+                                <p class="text-sm text-gray-500 mt-3 text-center" data-i18n="click_to_view">ছবিতে ক্লিক
+                                    করে বড় করে দেখুন</p>
+                            </div>
+                            <div id="poster-error"
+                                class="hidden bg-red-100 border border-red-400 text-red-700 p-4 rounded-lg mt-5">
+                                <p>পোস্টার ইমেজ উপলব্ধ নয়।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="not-found-message" class="hidden text-center py-20">
+                    <i class="fas fa-exclamation-triangle text-red-500 text-6xl mb-4"></i>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">নোটিশটি খুঁজে পাওয়া যায়নি!</h2>
+                    <p class="text-gray-600">আপনি যে নোটিশটি খুঁজছেন সেটি এই মুহূর্তে উপলব্ধ নেই অথবা তার URL ভুল রয়েছে।
+                    </p>
+                    <a href="notice.html"
+                        class="mt-6 inline-block text-purple-600 hover:text-purple-800 font-semibold transition">
+                        <i class="fas fa-arrow-left mr-2"></i> সকল নোটিশে ফিরে যান
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <div id="imageModal"
+        class="fixed inset-0 z-[100] bg-black/90 hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <button id="closeModal"
+            class="absolute top-5 right-5 text-white hover:text-purple-400 transition transform hover:scale-110 z-50 bg-black/50 w-12 h-12 rounded-full flex items-center justify-center">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+        <img id="modalImage" src="" alt="Full view"
+            class="max-w-full max-h-[90vh] object-contain transition-transform duration-300 scale-95" />
+    </div>
+
+    <script src="./assets/js/loader.js"></script>
+    <script src="./assets/js/notice-details.js"></script>
+</body>
+
+</html>
