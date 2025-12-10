@@ -183,8 +183,6 @@ const translations = {
     footer_contact_title: "যোগাযোগের তথ্য",
     footer_address: "মকিমপুর, পীরগঞ্জ, রংপুর",
     footer_social_title: "সোশ্যাল মিডিয়া",
-    footer_copy:
-      "&copy; ২০২৫ কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ। সর্বস্বত্ব সংরক্ষিত।",
   },
   en: {
     page_title: "Technical Training Center, Pirganj",
@@ -226,46 +224,47 @@ const translations = {
     course_5_title: "Motor Driving",
     course_5_desc: "Motor vehicle driving training",
     course_6_title: "Other Trades",
-    course_6_desc: "Various other technical trainings",
+    course_6_desc: "Various other technical training",
     btn_more: "More",
     all_notices_title: "All Notices",
     all_notices_sub: "Our latest notices and announcements",
     badge_new: "New",
-    n1_date: "December 08, 2025",
-    n1_title: "Admission for Aug-Nov 2025 Session",
+    n1_date: "08 December, 2025",
+    n1_title: "Admission for August-November/2025 Session",
     n1_desc:
-      "Applications invited for 03 months/360 hours training course under ASSET project.",
-    read_details: "See Details",
+      "Applications are invited for admission to the 03 months/360 hours training course under the ASSET project.",
+    read_details: "Read Details",
     badge_result: "Result",
-    n2_date: "November 25, 2025",
+    n2_date: "25 November, 2025",
     n2_title: "7th Cycle Final Result",
-    n2_desc: "Final result of 7th cycle training has been published.",
+    n2_desc: "The final result of the 7th cycle training has been published.",
     see_result: "See Result",
     badge_exam: "Exam",
-    n3_date: "November 20, 2025",
+    n3_date: "20 November, 2025",
     n3_title: "Written Exam Result",
-    n3_desc: "Written exam result for next session published.",
+    n3_desc:
+      "The written exam results for the upcoming session have been published.",
     read_more: "Read More",
-    n4_date: "November 15, 2025",
+    n4_date: "15 November, 2025",
     n4_title: "RPL Program Launched",
     n4_desc: "Recognition of Prior Learning program for experienced workers.",
     apply_now: "Apply Now",
     badge_job: "Job",
-    n5_date: "November 10, 2025",
-    n5_title: "Job Opportunities",
+    n5_date: "10 November, 2025",
+    n5_title: "Job Opportunities at Home and Abroad",
     n5_desc: "Job opportunities for trained trainees.",
     submit_cv: "Submit CV",
     badge_schedule: "Schedule",
-    n6_date: "November 05, 2025",
+    n6_date: "05 November, 2025",
     n6_title: "Class Routine Update",
-    n6_desc: "New session class routine published.",
+    n6_desc: "The new session's class routine has been published.",
     download_routine: "Download Routine",
     btn_more_notices: "View More Notices",
-    req_title: "Admission Requirements",
-    req_1: "Digitally attested copy of NID/Birth Certificate",
-    req_2: "2 copies of recent passport size photo",
-    req_3: "Attested copies of all educational certificates",
-    req_4: "Mobile number must be in the application",
+    req_title: "Required Admission Documents",
+    req_1: "Digital attested copy of National ID card/Birth Certificate",
+    req_2: "2 copies of recent passport size photographs",
+    req_3: "Attested copy of all educational qualification certificates",
+    req_4: "Must include mobile number on the application",
     req_5: "Photocopy of passport for overseas job candidates",
     req_6: "Copy of citizenship certificate",
     facilities_title: "Facilities",
@@ -294,7 +293,7 @@ const translations = {
     g2_name: "N.M. Nazmul Haque",
     g2_role: "Graphics Design Instructor",
     g2_phone: "01744-479601",
-    m1_name: "A.B.M Faruk Hasan",
+    m1_name: "A.B.M. Faruk Hasan",
     m1_role: "Mobile Servicing Instructor",
     m1_phone: "01737-243273",
     m2_name: "Md. Asaduzzaman Jewel",
@@ -320,87 +319,74 @@ const translations = {
     footer_contact_title: "Contact Info",
     footer_address: "Mokimpur, Pirganj, Rangpur",
     footer_social_title: "Social Media",
-    footer_copy:
-      "&copy; 2025 Technical Training Center, Pirganj. All rights reserved.",
   },
 };
 
-let currentLang = localStorage.getItem("lang") || "bn";
+const languageSelect = document.getElementById("language-select");
 
-// ফাংশনগুলো window অবজেক্টে যুক্ত করুন যাতে সব জায়গা থেকে অ্যাক্সেস করা যায়
-window.updateContent = function () {
-  // Update Text
+function applyTranslations(lang) {
+  const t = translations[lang];
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.getAttribute("data-i18n");
-    if (translations[currentLang][key]) {
-      element.innerHTML = translations[currentLang][key];
+    if (t[key]) {
+      element.textContent = t[key];
     }
   });
+  document.documentElement.lang = lang;
+}
 
-  // Update HTML Lang attribute
-  document.documentElement.lang = currentLang;
+if (languageSelect) {
+  // Set default language on load
+  let currentLang = localStorage.getItem("lang") || "bn";
+  languageSelect.value = currentLang;
+  applyTranslations(currentLang);
 
-  // Update Button Text
-  const btnText = currentLang === "bn" ? "ENGLISH" : "বাংলা";
-  const btnTextMobile = currentLang === "bn" ? "EN" : "BN";
+  languageSelect.addEventListener("change", function () {
+    currentLang = this.value;
+    localStorage.setItem("lang", currentLang);
+    applyTranslations(currentLang);
+  });
+}
 
-  const desktopBtn = document.getElementById("lang-btn-text-desktop");
-  const mobileBtn = document.getElementById("lang-btn-text-mobile");
-
-  if (desktopBtn) desktopBtn.innerText = btnText;
-  if (mobileBtn) mobileBtn.innerText = btnTextMobile;
-
-  // Save to LocalStorage
-  localStorage.setItem("lang", currentLang);
-};
-
-window.toggleLanguage = function () {
-  currentLang = currentLang === "bn" ? "en" : "bn";
-  window.updateContent();
-};
-
-// Initialize
-document.addEventListener("DOMContentLoaded", window.updateContent);
-
-// Hero Slider
+// Hero Section Slider Logic
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".hero-slide");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+  let slideInterval;
+  const slideDuration = 5000; // 5 seconds
 
-  if (slides.length > 0 && prevBtn && nextBtn) {
-    let currentSlide = 0;
-    const totalSlides = slides.length;
-    let slideInterval;
+  function showSlide(index) {
+    slides.forEach((slide) => {
+      slide.classList.remove("opacity-100");
+      slide.classList.add("opacity-0");
+    });
+    slides[index].classList.remove("opacity-0");
+    slides[index].classList.add("opacity-100");
+  }
 
-    function showSlide(index) {
-      slides.forEach((slide) => {
-        slide.classList.remove("opacity-100");
-        slide.classList.add("opacity-0");
-      });
-      slides[index].classList.remove("opacity-0");
-      slides[index].classList.add("opacity-100");
-    }
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
 
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      showSlide(currentSlide);
-    }
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
 
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-      showSlide(currentSlide);
-    }
+  function startAutoSlide() {
+    slideInterval = setInterval(nextSlide, slideDuration);
+  }
 
-    function startAutoSlide() {
-      slideInterval = setInterval(nextSlide, 5000);
-    }
+  function resetTimer() {
+    clearInterval(slideInterval);
+    startAutoSlide();
+  }
 
-    function resetTimer() {
-      clearInterval(slideInterval);
-      startAutoSlide();
-    }
-
+  if (prevBtn && nextBtn && slides.length > 1) {
     nextBtn.addEventListener("click", () => {
       nextSlide();
       resetTimer();
@@ -411,6 +397,7 @@ document.addEventListener("DOMContentLoaded", () => {
       resetTimer();
     });
 
+    // Start auto-sliding as soon as the page loads
     startAutoSlide();
   }
 });
@@ -447,11 +434,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     closeBtn.addEventListener("click", closeModal);
     modal.addEventListener("click", (e) => {
-      if (e.target === modal) closeModal();
+      if (e.target === modal) {
+        closeModal();
+      }
     });
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !modal.classList.contains("hidden"))
+      if (e.key === "Escape" && !modal.classList.contains("hidden")) {
         closeModal();
+      }
     });
   }
 });
