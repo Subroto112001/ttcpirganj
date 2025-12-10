@@ -4,11 +4,11 @@ const translations = {
     header_title: "কারিগরি প্রশিক্ষণ কেন্দ্র",
     header_subtitle: "পীরগঞ্জ, রংপুর",
     nav_home: "হোম",
-     nav_about: "আমাদের সম্পর্কে",
+    nav_about: "আমাদের সম্পর্কে",
     nav_courses: "কোর্স",
     nav_management: "ব্যবস্থাপনা",
     nav_gallery: "গ্যালারি",
-      nav_contact: "যোগাযোগ",
+    nav_contact: "যোগাযোগ",
     nav_notice: "নোটিশ",
     hero_title: "আমাদের কোর্স সমূহ",
     hero_desc: "দক্ষ জনশক্তি গড়ার প্রশিক্ষণ কর্মসূচি",
@@ -60,11 +60,12 @@ const translations = {
     cta_title: "এখনই আবেদন করুন",
     cta_desc: "আপনার ক্যারিয়ার গড়ার প্রথম পদক্ষেপ নিন",
     apply_btn: "আবেদন ফরম ডাউনলোড",
-    footer_title: "টিটিসি পীরগঞ্জ",
+    footer_logo_text: "টিটিসি পীরগঞ্জ",
     footer_desc: "কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ, রংপুর",
-    footer_contact: "যোগাযোগের তথ্য",
+    footer_contact_title: "যোগাযোগের তথ্য",
     footer_address: "মকিমপুর, পীরগঞ্জ, রংপুর",
-    footer_links: "দ্রুত লিংক",
+    footer_ql_title: "দ্রুত লিংক",
+    footer_social_title: "সোশ্যাল মিডিয়া",
     footer_copy:
       "&copy; ২০২৫ কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ। সর্বস্বত্ব সংরক্ষিত।",
   },
@@ -73,11 +74,11 @@ const translations = {
     header_title: "Technical Training Center",
     header_subtitle: "Pirganj, Rangpur",
     nav_home: "Home",
-     nav_about: "About Us",
+    nav_about: "About Us",
     nav_courses: "Courses",
     nav_management: "Management",
     nav_gallery: "Gallery",
-      nav_contact: "Contact",
+    nav_contact: "Contact",
     nav_notice: "Notice",
     hero_title: "Our Courses",
     hero_desc: "Building Skilled Workforce Training Programs",
@@ -129,11 +130,13 @@ const translations = {
     cta_title: "Apply Now",
     cta_desc: "Take the first step to build your career",
     apply_btn: "Download Application Form",
-    footer_title: "TTC Pirganj",
+    contact_phone_num: "+8801842196566",
+    footer_logo_text: "TTC Pirganj",
     footer_desc: "Technical Training Center, Pirganj, Rangpur",
-    footer_contact: "Contact Information",
+    footer_contact_title: "Contact Information",
     footer_address: "Mokimpur, Pirganj, Rangpur",
-    footer_links: "Quick Links",
+    footer_ql_title: "Quick Links",
+    footer_social_title: "Social Media",
     footer_copy:
       "&copy; 2025 Technical Training Center, Pirganj. All rights reserved.",
   },
@@ -163,31 +166,6 @@ function toggleLanguage() {
   updateContent();
 }
 
-// Mobile Menu
-const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-if (mobileMenuBtn && mobileMenu) {
-  mobileMenuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("active");
-    const icon = mobileMenuBtn.querySelector("i");
-    if (mobileMenu.classList.contains("active")) {
-      icon.classList.remove("fa-bars");
-      icon.classList.add("fa-times");
-    } else {
-      icon.classList.remove("fa-times");
-      icon.classList.add("fa-bars");
-    }
-  });
-}
-
-// Language Buttons
-document
-  .getElementById("lang-btn-desktop")
-  ?.addEventListener("click", toggleLanguage);
-document
-  .getElementById("lang-btn-mobile")
-  ?.addEventListener("click", toggleLanguage);
-
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
@@ -199,5 +177,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Initialize
+// Expose functions globally for use by loader.js
+window.updateContent = updateContent;
+window.toggleLanguage = toggleLanguage;
+
+// Initialize language on DOMContentLoaded, although loader.js will also call it after components load
 document.addEventListener("DOMContentLoaded", updateContent);

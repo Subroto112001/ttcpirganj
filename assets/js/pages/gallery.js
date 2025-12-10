@@ -53,6 +53,14 @@ const translations = {
     nav_management: "Management",
     nav_contact: "Contact",
     nav_notice: "Notice",
+    // footer
+    contact_phone_num: "+8801842196566",
+    footer_logo_text: "TTC Pirganj",
+    footer_desc: "Technical Training Center, Pirganj, Rangpur",
+    footer_ql_title: "Quick Links",
+    footer_contact_title: "Contact Info",
+    footer_address: "Mokimpur, Pirganj, Rangpur",
+    footer_social_title: "Social Media",
     footer_copy:
       "&copy; 2025 Technical Training Center, Pirganj. All rights reserved.",
   },

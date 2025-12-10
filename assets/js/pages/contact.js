@@ -6,35 +6,37 @@ const contactTranslations = {
     header_title: "কারিগরি প্রশিক্ষণ কেন্দ্র",
     header_subtitle: "পীরগঞ্জ, রংপুর",
     nav_home: "হোম",
-    nav_contact: "যোগাযোগ",
+    nav_contact: "যোগাযোগ", // Info Cards
 
-    // Info Cards
     info_address_title: "ঠিকানা",
     info_address_desc: "মকিমপুর, পীরগঞ্জ, রংপুর, বাংলাদেশ।",
     info_contact_title: "সরাসরি যোগাযোগ",
     info_hours_title: "অফিস সময়",
     day_sun_thu: "রবি - বৃহস্পতি:",
     day_fri_sat: "শুক্র - শনি:",
-    closed: "বন্ধ",
+    closed: "বন্ধ", // Form
 
-    // Form
     form_title: "আমাদের বার্তা পাঠান",
     label_name: "আপনার নাম",
     label_phone: "মোবাইল নম্বর",
     label_email: "ইমেইল (অপশনাল)",
     label_message: "আপনার বার্তা",
     btn_send: "বার্তা পাঠান",
-    map_label: "গুগল ম্যাপে দেখুন",
+    map_label: "গুগল ম্যাপে দেখুন", // Alerts
 
-    // Alerts
-    success_msg: "আপনার বার্তা সফলভাবে পাঠানো হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।",
+    success_msg: "আপনার বার্তা সফলভাবে পাঠানো হয়েছে! আমরা শীঘ্রই যোগাযোগ করব।", // Footer & Header Translations
 
-    // Footer & Header Translations
     nav_about: "আমাদের সম্পর্কে",
     nav_courses: "কোর্স",
     nav_management: "ব্যবস্থাপনা",
     nav_gallery: "গ্যালারি",
-    nav_notice: "নোটিশ",
+    nav_notice: "নোটিশ", // ADDED MISSING FOOTER KEYS BELOW
+    footer_logo_text: "টিটিসি পীরগঞ্জ",
+    footer_desc: "কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ, রংপুর",
+    footer_contact_title: "যোগাযোগের তথ্য",
+    footer_address: "মকিমপুর, পীরগঞ্জ, রংপুর",
+    footer_ql_title: "দ্রুত লিংক",
+    footer_social_title: "সোশ্যাল মিডিয়া",
     footer_copy:
       "&copy; ২০২৫ কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ। সর্বস্বত্ব সংরক্ষিত।",
   },
@@ -44,36 +46,39 @@ const contactTranslations = {
     header_title: "Technical Training Center",
     header_subtitle: "Pirganj, Rangpur",
     nav_home: "Home",
-    nav_contact: "Contact",
+    nav_contact: "Contact", // Info Cards
 
-    // Info Cards
     info_address_title: "Address",
     info_address_desc: "Mokimpur, Pirganj, Rangpur, Bangladesh.",
     info_contact_title: "Direct Contact",
     info_hours_title: "Office Hours",
     day_sun_thu: "Sun - Thu:",
     day_fri_sat: "Fri - Sat:",
-    closed: "Closed",
+    closed: "Closed", // Form
 
-    // Form
     form_title: "Send Us a Message",
     label_name: "Your Name",
     label_phone: "Mobile Number",
     label_email: "Email (Optional)",
     label_message: "Your Message",
     btn_send: "Send Message",
-    map_label: "View on Google Maps",
+    map_label: "View on Google Maps", // Alerts
 
-    // Alerts
     success_msg:
-      "Your message has been sent successfully! We will contact you soon.",
+      "Your message has been sent successfully! We will contact you soon.", // Footer & Header Translations
 
-    // Footer & Header Translations
     nav_about: "About Us",
     nav_courses: "Courses",
     nav_management: "Management",
     nav_gallery: "Gallery",
     nav_notice: "Notices",
+    contact_phone_num: "+8801842196566",
+    footer_logo_text: "TTC Pirganj",
+    footer_desc: "Technical Training Center, Pirganj, Rangpur",
+    footer_contact_title: "Contact Information",
+    footer_address: "Mokimpur, Pirganj, Rangpur",
+    footer_ql_title: "Quick Links",
+    footer_social_title: "Social Media",
     footer_copy:
       "&copy; 2025 Technical Training Center, Pirganj. All rights reserved.",
   },
@@ -86,28 +91,24 @@ let currentContactLang = localStorage.getItem("lang") || "bn";
 // 1. Initialize
 function initContactPage() {
   renderContactPage();
-  setupForm();
-  // Note: We do NOT run setupMobileMenu here because your global loader.js handles it.
+  setupForm(); // Note: We do NOT run setupMobileMenu here because your global loader.js handles it.
 }
 
 // 2. Render Text
 function renderContactPage() {
   currentContactLang = localStorage.getItem("lang") || "bn";
-  const t = contactTranslations[currentContactLang];
+  const t = contactTranslations[currentContactLang]; // Update Document Title
 
-  // Update Document Title
   document.title = t.page_title;
-  document.documentElement.lang = currentContactLang;
+  document.documentElement.lang = currentContactLang; // Update Text Content (Handles both Page content AND Header/Footer)
 
-  // Update Text Content (Handles both Page content AND Header/Footer)
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.getAttribute("data-i18n");
+    const key = element.getAttribute("data-i18n"); // Ensure the key exists before attempting to update the innerHTML
     if (t[key]) {
-      element.innerText = t[key];
+      element.innerHTML = t[key]; // Changed innerText to innerHTML to allow for copyright entity (&copy;)
     }
-  });
+  }); // Update Form Placeholders
 
-  // Update Form Placeholders
   const nameInput = document.querySelector('input[type="text"]');
   const phoneInput = document.querySelector('input[type="tel"]');
   const msgInput = document.querySelector("textarea");
@@ -122,9 +123,8 @@ function renderContactPage() {
     msgInput.placeholder =
       currentContactLang === "bn"
         ? "আপনার বিস্তারিত বার্তা এখানে লিখুন..."
-        : "Write your detailed message here...";
+        : "Write your detailed message here..."; // Update Language Button Text (Syncs with Header)
 
-  // Update Language Button Text (Syncs with Header)
   const btnText = currentContactLang === "bn" ? "ENGLISH" : "বাংলা";
   const desktopBtn = document.getElementById("lang-btn-text-desktop");
   const mobileBtn = document.getElementById("lang-btn-text-mobile");
@@ -139,9 +139,8 @@ function setupForm() {
   const form = document.getElementById("contactForm");
   if (form) {
     form.addEventListener("submit", function (e) {
-      e.preventDefault();
+      e.preventDefault(); // Mock Submission Animation
 
-      // Mock Submission Animation
       const btn = form.querySelector("button[type='submit']");
       const originalText = btn.innerHTML;
 
@@ -163,12 +162,10 @@ function setupForm() {
 window.toggleLanguage = function () {
   const newLang = currentContactLang === "bn" ? "en" : "bn";
   localStorage.setItem("lang", newLang);
-  currentContactLang = newLang;
+  currentContactLang = newLang; // Update the page content
 
-  // Update the page content
-  renderContactPage();
+  renderContactPage(); // If there are other global update functions, trigger them here // This conditional ensures other global update functions (like on the Course page) are called, but prevents recursion with itself
 
-  // If there are other global update functions, trigger them here
   if (
     typeof window.updateContent === "function" &&
     window.updateContent !== renderContactPage

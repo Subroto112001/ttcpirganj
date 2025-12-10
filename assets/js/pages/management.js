@@ -26,6 +26,12 @@ const translations = {
     close: "বন্ধ করুন",
 
     // --- FOOTER ---
+    footer_logo_text: "টিটিসি পীরগঞ্জ",
+    footer_desc: "কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ, রংপুর",
+    footer_contact_title: "যোগাযোগের তথ্য",
+    footer_address: "মকিমপুর, পীরগঞ্জ, রংপুর",
+    footer_ql_title: "দ্রুত লিংক",
+    footer_social_title: "সোশ্যাল মিডিয়া",
     footer_copy:
       "&copy; ২০২৫ কারিগরি প্রশিক্ষণ কেন্দ্র, পীরগঞ্জ। সর্বস্বত্ব সংরক্ষিত।",
   },
@@ -56,6 +62,13 @@ const translations = {
     close: "Close",
 
     // --- FOOTER ---
+    contact_phone_num: "+8801842196566",
+    footer_logo_text: "TTC Pirganj",
+    footer_desc: "Technical Training Center, Pirganj, Rangpur",
+    footer_contact_title: "Contact Information",
+    footer_address: "Mokimpur, Pirganj, Rangpur",
+    footer_ql_title: "Quick Links",
+    footer_social_title: "Social Media",
     footer_copy:
       "&copy; 2025 Technical Training Center, Pirganj. All rights reserved.",
   },
